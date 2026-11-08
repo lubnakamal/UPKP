@@ -1,6 +1,6 @@
 # UPKP Tingkat 3 — Materi & CAT Tryout
 
-Aplikasi web statis untuk persiapan **Ujian Penyesuaian Kualifikasi Pendidikan (UPKP) Tingkat 3** (D3–S3). Berisi 14 modul materi yang diperluas dari kisi-kisi resmi, field report, dan bocoran, ditambah **100 soal CAT Tryout** serta **100 soal latihan per materi** dengan pembahasan mendalam.
+Aplikasi web statis untuk persiapan **Ujian Penyesuaian Kualifikasi Pendidikan (UPKP) Tingkat 3** (D3–S3). Berisi 13 modul materi yang diperluas dari kisi-kisi resmi, field report, dan bocoran, ditambah **100 soal CAT Tryout** serta **100 soal latihan per materi** dengan pembahasan mendalam.
 
 Seluruh aplikasi berjalan **offline** — tanpa server, tanpa build, tanpa CDN, dan tanpa koneksi internet.
 
@@ -19,14 +19,14 @@ Seluruh aplikasi berjalan **offline** — tanpa server, tanpa build, tanpa CDN, 
 ## Fitur
 
 ### Pembelajaran
-- **14 modul materi** terstruktur: TWK, TKT, TSI, TKP, dan modul pengayaan.
+- **13 modul materi** terstruktur: TWK, TKT, TSI, TKP, dan modul pengayaan.
 - Setiap modul memuat tujuan pembelajaran, estimasi waktu, uraian bertingkat, tabel rangkuman, callout "kunci/jebakan/contoh", ringkasan, dan dasar hukum.
 - Pencarian materi dan filter berdasarkan kelompok ujian.
 - Penanda **sudah dibaca** yang tersimpan otomatis per perangkat.
 - Navigasi daftar isi (TOC) per bagian pada setiap modul.
 
 ### Latihan & Tryout
-- **Latihan per materi** untuk 13 materi teruji (di luar modul pengayaan).
+- **Latihan per materi** untuk 12 materi teruji (di luar modul pengayaan).
 - **CAT Tryout 100 soal / 90 menit** sesuai komposisi resmi.
 - Soal berbasis stimulus dan kasus (HOTS/analisis/terapan), bukan sekadar hafalan.
 - Timer berjalan otomatis, tidak dapat dijeda, dan **auto-submit** saat waktu habis.
@@ -58,7 +58,7 @@ Komposisi mengikuti kisi-kisi resmi: **100 soal, 90 menit**.
 | Kelompok | Nama | Jumlah | Materi |
 |---|---|---:|---|
 | TWK | Tes Wawasan Kebangsaan | 30 | Pancasila 10, UUD 1945 10, Sejarah Indonesia 5, Bahasa Indonesia 5 |
-| TKT | Tes Kompetensi Teknis | 25 | Perkantoran 5, Kepegawaian 5, Pelayanan Publik 5, Good Governance 5, Kebijakan Publik 5 |
+| TKT | Tes Kompetensi Teknis | 25 | Peraturan Kepegawaian 10, Pelayanan Publik 5, Good Governance 5, Kebijakan Publik 5 |
 | TSI | Tes Substansi Instansi | 30 | Renstra & Perencanaan Pembangunan 15, SOTK 15 |
 | TKP | Tes Kompetensi Penunjang | 15 | Bahasa Inggris 10, Literasi Digital 5 |
 | **Total** | | **100** | |
@@ -67,21 +67,22 @@ Distribusi kunci jawaban tryout dan latihan masing-masing seimbang: **20 soal pe
 
 ### Distribusi Latihan per Materi (100 soal)
 
+Latihan memakai komposisi yang sama dengan blueprint resmi agar proporsi antar-materi konsisten dengan tryout.
+
 | Kelompok | Jumlah | Materi |
 |---|---:|---|
-| TWK | 32 | Pancasila 9, UUD 1945 9, Bahasa Indonesia 7, Sejarah 7 |
-| TKT | 36 | Perkantoran 7, Kepegawaian 8, Pelayanan 7, Good Governance 7, Kebijakan 7 |
-| TSI | 18 | Renstra 9, SOTK 9 |
-| TKP | 14 | Bahasa Inggris 7, Literasi Digital 7 |
-
-> Distribusi latihan sengaja mengikuti bobot materi (bukan proporsi blueprint tryout) agar setiap topik mendapat porsi latihan yang memadai.
+| TWK | 30 | Pancasila 10, UUD 1945 10, Sejarah 5, Bahasa Indonesia 5 |
+| TKT | 25 | Peraturan Kepegawaian 10, Pelayanan Publik 5, Good Governance 5, Kebijakan Publik 5 |
+| TSI | 30 | Renstra & Perencanaan Pembangunan 15, SOTK 15 |
+| TKP | 15 | Bahasa Inggris 10, Literasi Digital 5 |
+| **Total** | **100** | |
 
 ---
 
 ## Struktur Proyek
 
 ```
-G:\UPKP\
+D:\www\UPKP\
 ├── index.html                  # Shell aplikasi + urutan pemuatan script
 ├── README.md
 ├── assets\
@@ -97,15 +98,15 @@ G:\UPKP\
 └── data\
     ├── materi\
     │   ├── twk.js              # Pancasila, UUD 1945, Sejarah, Bahasa Indonesia
-    │   ├── tkt.js              # Perkantoran, Kepegawaian, Pelayanan, Good Governance, Kebijakan
+    │   ├── tkt.js              # Kepegawaian, Pelayanan, Good Governance, Kebijakan
     │   ├── tsi.js              # Renstra, SOTK
     │   ├── tkp.js              # Bahasa Inggris, Literasi Digital
     │   └── pengayaan.js        # Modul pengayaan FR & bocoran
     └── soal\
         ├── tryout-a.js         # T001–T050
         ├── tryout-b.js         # T051–T100
-        ├── latihan-a.js        # L001–L050
-        └── latihan-b.js        # L051–L100
+        ├── latihan-a.js        # L001–L050 (selektif)
+        └── latihan-b.js        # L051–L119
 ```
 
 ### Rute Aplikasi
@@ -113,7 +114,7 @@ G:\UPKP\
 | Rute | Halaman |
 |---|---|
 | `#/` | Beranda / dashboard |
-| `#/materi` | Indeks 14 modul materi |
+| `#/materi` | Indeks 13 modul materi |
 | `#/materi/:id` | Detail modul + daftar isi |
 | `#/latihan` | Pemilihan latihan per materi |
 | `#/tryout` | Briefing CAT Tryout |

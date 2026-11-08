@@ -1,7 +1,7 @@
 /* ============================================================
    Bank Soal Tryout — Bagian A (T001–T050)
    Blueprint: Pancasila 10, UUD 10, Sejarah 5, B. Indonesia 5,
-   Perkantoran 5, Kepegawaian 5, Pelayanan 5, Good Governance 5
+   Kepegawaian 10, Pelayanan 5, Good Governance 5
    ============================================================ */
 window.SOAL_TRYOUT = (window.SOAL_TRYOUT || []).concat([
   {
@@ -1149,37 +1149,37 @@ window.SOAL_TRYOUT = (window.SOAL_TRYOUT || []).concat([
     mode: "tryout",
     kelompok: "TKT",
     materi: "kepegawaian",
-    tipe: "Terapan",
-    stimulus: "Seorang pimpinan menuliskan instruksi pada lembar surat: “Koordinasikan dengan Bidang Anggaran, selesaikan paling lambat Kamis.”",
-    pertanyaan: "Dokumen dan arah komunikasi tersebut paling tepat disebut …",
+    tipe: "HOTS",
+    stimulus: "Sebuah dinas akan mengisi jabatan Kepala Bidang. Salah satu kandidat memiliki hubungan keluarga dengan kepala dinas, sedangkan kandidat lain tidak memiliki hubungan keluarga tetapi kualifikasi, kompetensi, dan rekam jejak kinerjanya lebih sesuai. Panitia seleksi diminta memutuskan berdasarkan sistem merit.",
+    pertanyaan: "Keputusan yang paling tepat adalah …",
     opsi: {
-      A: "Laporan, dari bawahan kepada atasan.",
-      B: "Disposisi, dari atasan kepada bawahan.",
-      C: "Nota dinas, dari sejawat kepada sejawat.",
-      D: "Buku ekspedisi, untuk mencatat pengiriman surat.",
-      E: "Berita acara, untuk mencatat hasil rapat."
+      A: "Memilih kandidat yang memiliki hubungan keluarga agar koordinasi internal lebih mudah.",
+      B: "Memilih kandidat yang paling sesuai berdasarkan kualifikasi, kompetensi, dan kinerja melalui seleksi yang transparan dan akuntabel.",
+      C: "Menunda seluruh seleksi sampai ada kandidat dari luar instansi.",
+      D: "Memilih kedua kandidat secara bergantian tanpa melalui seleksi.",
+      E: "Memilih kandidat dengan masa kerja terlama tanpa menilai kompetensinya."
     },
     kunci: "B",
     pembahasan: {
-      inti: "Disposisi adalah arahan pimpinan kepada bawahan atas surat yang diterima.",
-      benar: "Instruksi pada lembar surat dari pimpinan kepada pelaksana merupakan disposisi. Arahnya dari atasan ke bawahan dan berisi arahan, persetujuan, atau permintaan tindak lanjut.",
+      inti: "Sistem merit mewajibkan pengisian jabatan didasarkan pada kualifikasi, kompetensi, dan kinerja, bukan hubungan pribadi atau kekerabatan.",
+      benar: "Sistem merit menjamin perlakuan adil dan transparan dalam manajemen ASN. Kandidat yang paling sesuai secara kualifikasi, kompetensi, dan kinerja harus dipilih melalui seleksi, sehingga keputusan dapat dipertanggungjawabkan dan bebas dari nepotisme.",
       opsi: {
-        A: "Laporan berarah dari bawahan ke atasan.",
-        B: "Tepat. Disposisi berisi arahan pimpinan kepada bawahan.",
-        C: "Nota dinas bisa antarsejawat, tetapi konteks instruksi pimpinan pada surat adalah disposisi.",
-        D: "Buku ekspedisi mencatat pengiriman dan tanda terima surat.",
-        E: "Berita acara mencatat peristiwa atau hasil rapat."
+        A: "Memilih karena hubungan keluarga merupakan praktik nepotisme yang bertentangan dengan sistem merit.",
+        B: "Tepat. Seleksi berbasis kualifikasi, kompetensi, dan kinerja sesuai prinsip merit.",
+        C: "Menunda seleksi tanpa alasan objektif tidak menyelesaikan kebutuhan organisasi.",
+        D: "Pemilihan bergantian tanpa seleksi mengabaikan kompetensi dan prosedur.",
+        E: "Masa kerja saja bukan ukuran yang cukup; kompetensi dan kinerja tetap harus dinilai."
       },
       dasar: [
-        "Tata naskah dinas dan manajemen persuratan.",
-        "Perbedaan disposisi dan laporan."
+        "UU Nomor 20 Tahun 2023 tentang Aparatur Sipil Negara.",
+        "Prinsip sistem merit dalam manajemen ASN."
       ],
-      jebakan: "Disposisi = atas ke bawah; laporan = bawah ke atas. Jangan hanya melihat bentuk dokumennya."
+      jebakan: "Kedekatan personal atau hubungan keluarga sering dijadikan alasan “efisiensi koordinasi”. Dalam soal merit, alasan itu justru menandakan jawaban yang salah."
     },
     variasi: [
-      "Soal alur surat masuk dari penerimaan sampai pengarsipan.",
-      "Soal perbedaan buku agenda dan buku ekspedisi.",
-      "Soal menulis disposisi yang jelas dan terukur."
+      "Kasus promosi jabatan dengan kandidat berprestasi dan kandidat dengan kedekatan personal.",
+      "Kasus seleksi jabatan yang tidak transparan.",
+      "Soal penerapan sistem merit dalam mutasi dan promosi."
     ]
   },
   {
@@ -1187,37 +1187,37 @@ window.SOAL_TRYOUT = (window.SOAL_TRYOUT || []).concat([
     mode: "tryout",
     kelompok: "TKT",
     materi: "kepegawaian",
-    tipe: "HOTS",
-    stimulus: "Surat undangan gubernur tiba saat pimpinan dinas sedang dinas luar kota. Staf tata usaha menerima surat itu dan tidak tahu harus berbuat apa.",
-    pertanyaan: "Urutan tindakan yang paling tepat adalah …",
+    tipe: "Analisis",
+    stimulus: "Seorang pejabat menduduki jabatan Sekretaris Daerah Provinsi. Ia menyebut jabatannya sebagai JPT Pratama karena memimpin sekretariat daerah. Seorang staf mempertanyakan klasifikasi jabatan tersebut.",
+    pertanyaan: "Klasifikasi jabatan yang paling tepat adalah …",
     opsi: {
-      A: "Menyimpan surat sampai pimpinan kembali agar tidak salah tindak.",
-      B: "Mencatat surat, meneruskan kepada pejabat pengganti/PLH sesuai kewenangan, meminta disposisi, lalu menindaklanjuti.",
-      C: "Membuka surat dan langsung menjawab tanpa disposisi.",
-      D: "Mengembalikan surat kepada pengirim karena pimpinan tidak ada.",
-      E: "Mengumumkan isi surat di grup kantor agar semua tahu."
+      A: "Administrator, karena tugasnya mengoordinasikan perangkat daerah.",
+      B: "JPT Madya (eselon I), karena Sekretaris Daerah Provinsi termasuk pimpinan tinggi madya.",
+      C: "JPT Pratama (eselon II.a), karena setara dengan Kepala Dinas.",
+      D: "Pengawas, karena tugasnya mengawasi perangkat daerah.",
+      E: "Jabatan fungsional, karena bersifat keahlian."
     },
     kunci: "B",
     pembahasan: {
-      inti: "Surat dinas yang mendesak tidak boleh tertahan hanya karena pimpinan tidak di tempat.",
-      benar: "Staf harus mencatat surat, meneruskannya kepada pejabat pengganti atau PLH yang berwenang, meminta disposisi, lalu menindaklanjuti sesuai arahan. Prinsipnya: layanan tetap berjalan tanpa melampaui kewenangan.",
+      inti: "Sekretaris Daerah Provinsi adalah jabatan pimpinan tinggi madya (JPT Madya), setara eselon I.",
+      benar: "Dalam peta jabatan ASN, JPT Madya menduduki eselon I. Contohnya adalah Sekretaris Daerah Provinsi serta Sekjen, Dirjen, atau Deputi di kementerian/lembaga. JPT Pratama berada pada eselon II, misalnya Kepala Dinas dan Sekretaris DPRD.",
       opsi: {
-        A: "Menahan surat berisiko melewatkan tenggat dan menghambat kegiatan.",
-        B: "Tepat. Ada pencatatan, eskalasi kewenangan, disposisi, dan tindak lanjut.",
-        C: "Staf tidak berwenang menjawab langsung tanpa disposisi.",
-        D: "Mengembalikan surat tidak menyelesaikan masalah dan tidak sopan secara kedinasan.",
-        E: "Mengumumkan isi surat berpotensi membocorkan informasi kedinasan."
+        A: "Administrator adalah eselon III, bukan jenjang Sekda Provinsi.",
+        B: "Tepat. Sekda Provinsi adalah JPT Madya atau eselon I.",
+        C: "JPT Pratama adalah eselon II, setingkat di bawah JPT Madya.",
+        D: "Pengawas adalah eselon IV, jauh di bawah Sekda Provinsi.",
+        E: "Jabatan fungsional memiliki jenjang keahlian/keterampilan, bukan jabatan struktural Sekda."
       },
       dasar: [
-        "Manajemen persuratan dan tata naskah dinas.",
-        "Konsep PLH/Pelaksana Harian dalam kepegawaian."
+        "UU Nomor 20 Tahun 2023 tentang Aparatur Sipil Negara.",
+        "Ketentuan peta jabatan dan jenjang jabatan ASN."
       ],
-      jebakan: "Pilihan A terlihat hati-hati, tetapi justru menyebabkan kelalaian. Tindakan tepat harus menjaga layanan tetap berjalan."
+      jebakan: "Jangan tertukar antara Sekda Provinsi (JPT Madya) dan Sekda Kabupaten/Kota (JPT Pratama). Soal sering menguji perbedaan tingkat pemerintahan."
     },
     variasi: [
-      "Kasus surat penawaran kerja sama yang mendesak saat pimpinan cuti.",
-      "Kasus surat dari masyarakat yang membutuhkan jawaban cepat.",
-      "Dikembangkan ke TKP: bagaimana mengelola tenggat saat pimpinan tidak tersedia?"
+      "Soal menentukan jabatan yang termasuk JPT Madya.",
+      "Soal membedakan JPT Pratama dan Administrator.",
+      "Soal peta jabatan di pemerintah provinsi."
     ]
   },
   {
@@ -1225,37 +1225,37 @@ window.SOAL_TRYOUT = (window.SOAL_TRYOUT || []).concat([
     mode: "tryout",
     kelompok: "TKT",
     materi: "kepegawaian",
-    tipe: "Analisis",
-    stimulus: "Dokumen pengadaan tahun lalu jarang dipakai tetapi masih diperlukan untuk audit. Di sisi lain, akta aset milik instansi mutlak diperlukan untuk kelangsungan organisasi.",
-    pertanyaan: "Klasifikasi arsip yang paling tepat adalah …",
+    tipe: "HOTS",
+    stimulus: "Seorang PNS menyusun SKP pada awal tahun. Ia hanya menuliskan daftar kegiatan sehari-hari tanpa sasaran, indikator, dan target. Ia berpendapat bahwa penilaian kinerja cukup didasarkan pada kehadiran dan banyaknya kegiatan yang dilakukan.",
+    pertanyaan: "Perbaikan yang paling tepat adalah …",
     opsi: {
-      A: "Dokumen pengadaan = arsip vital; akta aset = arsip inaktif.",
-      B: "Keduanya arsip statis.",
-      C: "Keduanya arsip aktif.",
-      D: "Dokumen pengadaan = arsip statis; akta aset = arsip aktif.",
-      E: "Dokumen pengadaan = arsip inaktif; akta aset = arsip vital."
+      A: "Menambah jam lembur agar dinilai lebih produktif.",
+      B: "Menghapus SKP karena dianggap hanya formalitas.",
+      C: "Menilai diri sendiri tanpa verifikasi atasan.",
+      D: "Mengandalkan absensi karena kehadiran adalah satu-satunya ukuran kinerja.",
+      E: "Menyusun sasaran, indikator, dan target yang terukur serta disepakati dengan atasan, lalu melengkapinya dengan penilaian perilaku kerja."
     },
     kunci: "E",
     pembahasan: {
-      inti: "Arsip inaktif jarang dipakai tetapi masih disimpan untuk kepentingan hukum/audit; arsip vital mutlak diperlukan bagi kelangsungan organisasi.",
-      benar: "Dokumen pengadaan tahun lalu yang jarang dipakai tetapi masih diperlukan untuk audit termasuk arsip inaktif. Akta aset yang mutlak diperlukan termasuk arsip vital.",
+      inti: "SKP harus memuat sasaran, indikator, dan target yang terukur serta disepakati antara pegawai dan atasan.",
+      benar: "Penilaian kinerja PNS terdiri atas SKP dan penilaian perilaku kerja. SKP yang baik memuat sasaran, indikator, dan target yang jelas, terukur, serta disepakati atasan–bawahan. Kehadiran dan jumlah kegiatan saja tidak cukup untuk menilai hasil dan dampak kinerja.",
       opsi: {
-        A: "Terbalik. Akta aset justru vital.",
-        B: "Arsip statis diserahkan ke lembaga kearsipan karena nilai historis.",
-        C: "Arsip aktif masih sering dipakai sehari-hari.",
-        D: "Klasifikasi tidak tepat.",
-        E: "Tepat. Inaktif untuk pengadaan, vital untuk akta aset."
+        A: "Lembur tanpa sasaran dan target tidak otomatis meningkatkan kinerja.",
+        B: "Menghapus SKP menghilangkan dasar pengukuran kinerja.",
+        C: "Penilaian diri tanpa verifikasi atasan tidak sah dan tidak objektif.",
+        D: "Kehadiran penting, tetapi bukan satu-satunya ukuran kinerja.",
+        E: "Tepat. SKP terukur disertai penilaian perilaku kerja."
       },
       dasar: [
-        "UU Nomor 43 Tahun 2009 tentang Kearsipan.",
-        "Jadwal Retensi Arsip (JRA)."
+        "Ketentuan manajemen kinerja PNS.",
+        "Sasaran Kinerja Pegawai (SKP) dan penilaian perilaku kerja."
       ],
-      jebakan: "“Jarang dipakai” bukan berarti boleh langsung dimusnahkan. Ada kewajiban retensi dan kepentingan audit."
+      jebakan: "Banyaknya kegiatan atau tingginya kehadiran sering dikira otomatis berarti kinerja baik. Fokus soal adalah keterukuran sasaran dan hasil."
     },
     variasi: [
-      "Soal jadwal retensi arsip dan pemusnahan.",
-      "Soal perbedaan arsip aktif, inaktif, vital, dan statis.",
-      "Soal prosedur pemusnahan arsip dengan berita acara."
+      "Soal menyusun indikator SKP yang terukur.",
+      "Soal konsekuensi penilaian kinerja terhadap tunjangan.",
+      "Soal perbedaan SKP dan penilaian perilaku kerja."
     ]
   },
   {
@@ -1263,37 +1263,37 @@ window.SOAL_TRYOUT = (window.SOAL_TRYOUT || []).concat([
     mode: "tryout",
     kelompok: "TKT",
     materi: "kepegawaian",
-    tipe: "Terapan",
-    stimulus: "Seorang staf harus menyusun laporan kas kecil, membuat naskah dinas, dan menyiapkan presentasi untuk rapat pimpinan.",
-    pertanyaan: "Kombinasi aplikasi perkantoran yang paling tepat adalah …",
+    tipe: "Analisis",
+    stimulus: "Sebuah daerah membutuhkan tenaga kesehatan. Pemerintah daerah mengusulkan formasi, tetapi sebagian calon adalah tenaga non-ASN yang telah lama mengabdi tanpa pernah mengikuti seleksi. Panitia diminta menentukan mekanisme pengadaan yang sesuai.",
+    pertanyaan: "Mekanisme pengadaan yang paling tepat adalah …",
     opsi: {
-      A: "Word untuk ketiga pekerjaan agar formatnya seragam.",
-      B: "Excel untuk kas kecil, Word untuk naskah dinas, PowerPoint untuk presentasi.",
-      C: "PowerPoint untuk kas kecil dan Excel untuk presentasi.",
-      D: "Excel untuk naskah dinas dan Word untuk presentasi.",
-      E: "Aplikasi desain grafis untuk seluruh pekerjaan."
+      A: "Mengangkat seluruh tenaga non-ASN langsung menjadi PNS tanpa seleksi.",
+      B: "Mengikuti formasi dan mekanisme seleksi ASN yang berlaku, dengan memperhatikan ketentuan penataan tenaga non-ASN.",
+      C: "Mengangkat tenaga non-ASN menjadi PPPK tanpa proses seleksi dan tanpa formasi.",
+      D: "Menunda pengadaan sampai seluruh tenaga non-ASN pensiun.",
+      E: "Mengisi formasi dengan pegawai dari instansi lain tanpa persetujuan."
     },
     kunci: "B",
     pembahasan: {
-      inti: "Setiap aplikasi memiliki kekuatan berbeda: pengolah angka untuk perhitungan, pengolah kata untuk naskah, dan presentasi untuk slides.",
-      benar: "Laporan kas kecil paling tepat disusun dengan Excel karena membutuhkan perhitungan. Naskah dinas menggunakan Word. Presentasi rapat menggunakan PowerPoint.",
+      inti: "Pengadaan ASN harus melalui formasi dan seleksi yang berlaku; masa pengabdian tenaga non-ASN tidak menggantikan prosedur seleksi.",
+      benar: "Pengadaan PNS dan PPPK dilaksanakan berdasarkan formasi dan mekanisme seleksi yang ditetapkan. Tenaga non-ASN dapat dipertimbangkan melalui kebijakan penataan sesuai ketentuan, tetapi pengangkatan langsung tanpa seleksi dan tanpa formasi tidak dibenarkan.",
       opsi: {
-        A: "Word kurang efisien untuk perhitungan kas kecil.",
-        B: "Tepat. Sesuai fungsi masing-masing aplikasi.",
-        C: "PowerPoint bukan aplikasi pengolah angka.",
-        D: "Excel bukan pengolah kata utama dan Word bukan aplikasi presentasi.",
-        E: "Desain grafis tidak dirancang untuk perhitungan dan naskah dinas."
+        A: "Pengangkatan langsung tanpa seleksi melanggar prinsip merit dan prosedur pengadaan.",
+        B: "Tepat. Formasi dan seleksi tetap menjadi dasar, dengan memperhatikan ketentuan penataan.",
+        C: "PPPK juga memerlukan formasi dan proses seleksi.",
+        D: "Menunda sampai pensiun tidak menyelesaikan kebutuhan layanan.",
+        E: "Mengisi formasi tanpa persetujuan dan prosedur melanggar kewenangan."
       },
       dasar: [
-        "Kompetensi teknis penggunaan aplikasi perkantoran.",
-        "Manajemen perkantoran modern."
+        "UU Nomor 20 Tahun 2023 tentang Aparatur Sipil Negara.",
+        "Ketentuan pengadaan PNS dan PPPK serta penataan tenaga non-ASN."
       ],
-      jebakan: "Soal sering menukar fungsi Excel dan Word. Excel = angka; Word = teks; PowerPoint = presentasi."
+      jebakan: "Masa kerja lama dan pengabdian nyata tetap tidak otomatis menjadi dasar pengangkatan. Bedakan empati terhadap tenaga non-ASN dengan prosedur seleksi yang sah."
     },
     variasi: [
-      "Soal memilih aplikasi untuk surat massal dan mail merge.",
-      "Soal perangkat minimal komputer: CPU, monitor, keyboard, mouse.",
-      "Soal keamanan data saat menyimpan dokumen penting."
+      "Soal formasi dan seleksi PPPK.",
+      "Soal penataan tenaga honorer.",
+      "Soal perbedaan pengadaan PNS dan PPPK."
     ]
   },
   {
@@ -1301,39 +1301,40 @@ window.SOAL_TRYOUT = (window.SOAL_TRYOUT || []).concat([
     mode: "tryout",
     kelompok: "TKT",
     materi: "kepegawaian",
-    tipe: "HOTS",
-    stimulus: "Seorang pegawai menemukan flashdisk asing di ruang rapat. Karena penasaran, ia ingin mengecek isinya melalui komputer kerjanya.",
-    pertanyaan: "Tindakan yang paling tepat adalah …",
+    tipe: "Analisis",
+    stimulus: "Seorang PNS terbukti melakukan tindak pidana kejahatan jabatan berdasarkan putusan pengadilan yang berkekuatan hukum tetap. Instansi akan memproses pemberhentiannya dan mempertimbangkan jenis pemberhentian yang sesuai.",
+    pertanyaan: "Jenis pemberhentian yang paling tepat adalah …",
     opsi: {
-      A: "Mencolokkan flashdisk ke komputer pribadi untuk melihat isinya.",
-      B: "Menyerahkan flashdisk kepada unit TI untuk diperiksa dan tidak mencolokkannya.",
-      C: "Membagikan flashdisk kepada rekan kerja agar diperiksa bersama.",
-      D: "Menghapus isinya lalu memakai flashdisk untuk menyimpan data.",
-      E: "Mengunggah isinya ke media sosial untuk mencari pemiliknya."
+      A: "Pemberhentian dengan hormat karena yang bersangkutan telah lama mengabdi.",
+      B: "Pemberhentian tidak dengan hormat karena melakukan tindak pidana kejahatan jabatan.",
+      C: "Pemberhentian dengan hormat tidak atas permintaan sendiri karena bukan permintaan pegawai.",
+      D: "Pemberhentian sementara sampai yang bersangkutan mencapai batas usia pensiun.",
+      E: "Mutasi ke unit lain sebagai bentuk pembinaan."
     },
     kunci: "B",
     pembahasan: {
-      inti: "Media penyimpanan asing berpotensi mengandung malware; penanganannya harus melalui unit TI.",
-      benar: "Flashdisk asing tidak boleh langsung dicolokkan. Serahkan kepada unit TI/keamanan informasi untuk dipindai dan diperiksa. Ini melindungi perangkat, jaringan, dan data instansi.",
+      inti: "Tindak pidana kejahatan jabatan yang berkekuatan hukum tetap menjadi dasar pemberhentian tidak dengan hormat.",
+      benar: "Pemberhentian tidak dengan hormat dikenakan antara lain pada PNS yang melakukan tindak pidana kejahatan jabatan atau pelanggaran disiplin berat tertentu. Putusan pengadilan yang berkekuatan hukum tetap memperkuat dasar pemberhentian tersebut.",
       opsi: {
-        A: "Mencolokkan perangkat asing berisiko malware dan pencurian data.",
-        B: "Tepat. Serahkan ke unit TI tanpa mencolokkan.",
-        C: "Membagikan memperluas risiko.",
-        D: "Menghapus isi tidak menghilangkan risiko malware dan dapat merusak barang bukti.",
-        E: "Mengunggah isi berpotensi membocorkan data dan melanggar privasi."
+        A: "Masa pengabdian tidak menghapus dasar pemberhentian tidak dengan hormat.",
+        B: "Tepat. Kejahatan jabatan menjadi dasar pemberhentian tidak dengan hormat.",
+        C: "Pemberhentian dengan hormat tidak atas permintaan sendiri bukan untuk kejahatan jabatan berat.",
+        D: "Pemberhentian sementara bukan bentuk akhir penyelesaian kasus pidana.",
+        E: "Mutasi bukan hukuman dan tidak menggantikan proses pemberhentian."
       },
       dasar: [
-        "Keamanan informasi dan pengelolaan insiden siber.",
-        "Kebijakan keamanan perangkat di lingkungan instansi."
+        "UU Nomor 20 Tahun 2023 tentang Aparatur Sipil Negara.",
+        "Ketentuan pemberhentian PNS karena tindak pidana kejahatan jabatan."
       ],
-      jebakan: "Rasa penasaran sering menjadi celah keamanan. Langkah aman selalu melibatkan unit TI."
+      jebakan: "Bedakan “dengan hormat tidak atas permintaan sendiri” untuk kasus seperti penyederhanaan organisasi, dan “tidak dengan hormat” untuk pelanggaran berat atau kejahatan jabatan."
     },
     variasi: [
-      "Kasus lampiran surel .exe yang meminta segera dibuka.",
-      "Kasus komputer terkunci ransomware.",
-      "Dikembangkan ke TKP: bagaimana membangun budaya keamanan informasi di kantor?"
+      "Soal membedakan jenis-jenis pemberhentian.",
+      "Soal pemberhentian karena pelanggaran disiplin berat.",
+      "Soal akibat hukum putusan pidana bagi PNS."
     ]
   },
+
   {
     id: "T036",
     mode: "tryout",

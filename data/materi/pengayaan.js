@@ -7,7 +7,7 @@ window.UPKP_MATERI["fr-bocoran"] = {
   id: "fr-bocoran",
   judul: "Pengayaan FR & Bocoran",
   kelompok: "PENGAYAAN",
-  urutan: 14,
+  urutan: 13,
   ringkas: "Asta Cita, presiden pasca-reformasi, peta eselon, Sekwan, Gubernur, Ki Hajar Dewantara, 35 kabupaten/kota Jawa Tengah, dan istilah yang sering tertukar.",
   estimasi: "34 menit",
   tujuan: [

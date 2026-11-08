@@ -120,10 +120,20 @@
 
     paintReview();
 
+    var reviewToolbar = document.querySelector(".review-toolbar");
+    if (reviewToolbar) reviewToolbar.addEventListener("click", function (e) {
+      var b = e.target.closest ? e.target.closest("[data-rfilter]") : null;
+      if (!b || !reviewToolbar.contains(b)) return;
+      reviewFilter = b.getAttribute("data-rfilter");
+      reviewToolbar.querySelectorAll("[data-rfilter]").forEach(function (x) {
+        x.classList.toggle("on", x === b);
+      });
+      paintReview();
+    });
+
     var reviewBtn = document.getElementById("reviewBtn");
     if (reviewBtn) reviewBtn.addEventListener("click", function () {
-      var el = document.getElementById("reviewSection");
-      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+      UI.scrollToEl(document.getElementById("reviewSection"));
     });
     var retry = document.getElementById("retryBtn");
     if (retry) retry.addEventListener("click", function () {
@@ -173,16 +183,6 @@
         "</div>" +
       "</details>";
     }).join("");
-
-    document.querySelectorAll("[data-rfilter]").forEach(function (b) {
-      b.addEventListener("click", function () {
-        reviewFilter = b.getAttribute("data-rfilter");
-        document.querySelectorAll("[data-rfilter]").forEach(function (x) {
-          x.classList.toggle("on", x === b);
-        });
-        paintReview();
-      });
-    });
   }
 
   /* ---------- riwayat & analitik ---------- */

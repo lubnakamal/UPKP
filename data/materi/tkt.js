@@ -1,166 +1,14 @@
 /* ============================================================
-   Materi TKT — Perkantoran, Kepegawaian, Pelayanan Publik,
-   Good Governance, Kebijakan Publik
+   Materi TKT — Kepegawaian, Pelayanan Publik, Good Governance,
+   Kebijakan Publik
    ============================================================ */
 window.UPKP_MATERI = window.UPKP_MATERI || {};
-
-window.UPKP_MATERI.perkantoran = {
-  id: "perkantoran",
-  judul: "Manajemen Perkantoran",
-  kelompok: "TKT",
-  urutan: 5,
-  ringkas: "Fungsi manajemen POAC, tata persuratan dan disposisi, kearsipan, teknologi kantor, rapat, serta K3 dan etika kerja.",
-  estimasi: "26 menit",
-  tujuan: [
-    "Menjelaskan fungsi manajemen perkantoran dan membedakan perencanaan, pengorganisasian, pelaksanaan, serta pengawasan.",
-    "Menguraikan alur surat masuk dan keluar, disposisi, laporan, serta perbedaan buku agenda dan buku ekspedisi.",
-    "Memilih perangkat dan aplikasi kantor yang tepat untuk suatu pekerjaan administrasi.",
-    "Menerapkan prinsip rapat efektif, K3 perkantoran, dan etika kerja dalam kasus nyata."
-  ],
-  sections: [
-    {
-      judul: "Manajemen perkantoran dan fungsi POAC",
-      html: `
-<p class="lead-in">Manajemen perkantoran adalah rangkaian kegiatan merencanakan, mengorganisasikan, mengarahkan, mengawasi, dan mengendalikan pekerjaan kantor agar informasi dan layanan administrasi tersedia tepat waktu, tepat mutu, dan tepat biaya.</p>
-<h3>1. Lima fungsi yang harus melekat</h3>
-<div class="tbl-wrap"><table>
-<thead><tr><th>Fungsi</th><th>Inti kegiatan</th><th>Contoh di kantor</th></tr></thead>
-<tbody>
-<tr><td>Planning</td><td>Menetapkan tujuan, target, strategi, standar kerja, dan sumber daya.</td><td>Menyusun rencana kerja tahunan dan target layanan surat.</td></tr>
-<tr><td>Organizing</td><td>Membagi tugas, menetapkan wewenang, dan menyusun koordinasi.</td><td>Menentukan siapa penerima surat, pencatat agenda, dan pengarsip.</td></tr>
-<tr><td>Actuating / directing</td><td>Menggerakkan, membimbing, dan memotivasi pelaksana.</td><td>Mengarahkan staf saat rapat koordinasi pagi.</td></tr>
-<tr><td>Controlling</td><td>Membandingkan rencana dan hasil, menemukan penyimpangan, lalu memperbaiki.</td><td>Memeriksa keterlambatan penyelesaian surat setiap pekan.</td></tr>
-<tr><td>Evaluating</td><td>Menilai capaian dan pembelajaran untuk perbaikan berikutnya.</td><td>Mengevaluasi kepuasan pengguna layanan administrasi.</td></tr>
-</tbody></table></div>
-<p><strong>Pengawasan</strong> bukan sekadar mencari kesalahan. Pengawasan adalah proses pengamatan pelaksanaan seluruh kegiatan organisasi untuk menjamin agar pekerjaan berjalan sesuai rencana. Karena itu, pengawasan yang baik selalu memiliki <b>standar</b>, <b>alat ukur</b>, dan <b>tindak lanjut</b>.</p>
-<div class="callout kunci"><span class="c-label">Kata kunci</span><p>Kegiatan administrasi memberi manfaat maksimal bila ada <b>program kerja</b>, <b>laporan</b>, dan <b>pengawasan</b>. Manajemen perkantoran = <b>merencanakan–mengorganisasikan–mengarahkan–mengawasi–mengendalikan</b>.</p></div>
-
-<h3>2. Prinsip pembagian kerja dan delegasi</h3>
-<ul>
-<li><b>Delegasi</b> adalah pemberian sebagian tanggung jawab dan kewenangan kepada bawahan, bukan pelepasan tanggung jawab atasan.</li>
-<li><b>Rentang kendali</b> adalah jumlah bawahan yang dapat dikelola secara efektif oleh seorang pimpinan.</li>
-<li><b>Kesatuan komando</b> berarti seorang pegawai sebaiknya menerima perintah dari satu atasan langsung agar tidak terjadi tumpang tindih.</li>
-<li><b>Koordinasi</b> menyelaraskan pekerjaan antarunit sehingga tidak ada pekerjaan yang tumpang tindih atau kosong.</li>
-</ul>
-<div class="callout jebakan"><span class="c-label">Jebakan</span><p>Soal sering menukar <b>actuating</b> dengan <b>organizing</b>. Membagi tugas dan menetapkan wewenang = organizing. Memberi arahan, mendampingi, dan memotivasi pelaksana = actuating/directing.</p></div>
-`
-    },
-    {
-      judul: "Tata persuratan dinas, disposisi, dan laporan",
-      html: `
-<h3>1. Jenis dan arah surat</h3>
-<div class="tbl-wrap"><table>
-<thead><tr><th>Jenis</th><th>Ciri</th><th>Contoh</th></tr></thead>
-<tbody>
-<tr><td>Surat dinas</td><td>Dibuat instansi untuk kepentingan kedinasan, memakai kop dan bahasa resmi.</td><td>Undangan rapat, permohonan narasumber.</td></tr>
-<tr><td>Surat internal</td><td>Beredar di dalam organisasi.</td><td>Nota dinas, memo, surat tugas.</td></tr>
-<tr><td>Surat eksternal</td><td>Dikirim kepada instansi atau pihak lain di luar organisasi.</td><td>Surat resmi kepada BKD atau kementerian.</td></tr>
-<tr><td>Surat masuk</td><td>Diterima organisasi, perlu dicatat dan didisposisi.</td><td>Undangan dari gubernur.</td></tr>
-<tr><td>Surat keluar</td><td>Dibuat organisasi untuk pihak lain, perlu dinomori dan diarsipkan.</td><td>Balasan permohonan data.</td></tr>
-</tbody></table></div>
-
-<h3>2. Alur surat masuk yang benar</h3>
-<ol>
-<li><b>Penerimaan</b> dan pemeriksaan kelengkapan surat.</li>
-<li><b>Pencatatan</b> pada buku agenda atau sistem persuratan elektronik.</li>
-<li><b>Penyampaian</b> kepada pimpinan atau pejabat yang berwenang.</li>
-<li><b>Disposisi</b> dari pimpinan kepada unit/pelaksana.</li>
-<li><b>Tindak lanjut</b> oleh pelaksana, disertai jawaban atau laporan.</li>
-<li><b>Pengarsipan</b> surat beserta bukti tindak lanjut.</li>
-</ol>
-<p><strong>Disposisi</strong> adalah bahasa komunikasi dari pimpinan kepada bawahan berisi arahan, persetujuan, penolakan, atau permintaan tindak lanjut. <strong>Laporan</strong> adalah komunikasi dari bawahan kepada atasan mengenai pelaksanaan tugas. Keduanya berbeda arah.</p>
-<div class="callout kunci"><span class="c-label">Hafalan cepat</span><p>Disposisi = <b>atas → bawah</b>. Laporan = <b>bawah → atas</b>. Buku agenda = mencatat surat masuk/keluar. Buku ekspedisi = mengantar/mengirim surat dan memperoleh tanda terima.</p></div>
-
-<h3>3. Struktur dan bahasa surat dinas</h3>
-<p>Bagian surat dinas: kepala surat, nomor, tanggal, lampiran, hal, alamat tujuan, salam pembuka, isi, penutup, tanda tangan, nama dan jabatan, serta tembusan. Bahasa surat harus <b>jelas, lugas, menarik, dan sopan</b>.</p>
-<ul>
-<li><b>a.n.</b> (atas nama) dipakai jika pejabat menandatangani untuk mengatasnamakan pejabat di atasnya, tetapi masih dalam lingkup kewenangannya.</li>
-<li><b>u.b.</b> (untuk beliau) dipakai jika ada pelimpahan penuh kepada pejabat di bawahnya.</li>
-<li>Tanggal surat diletakkan di bawah nomor surat atau di kanan atas, bukan di bawah kop surat.</li>
-<li>Kata <i>hal</i> tidak perlu diikuti <i>perihal</i> karena maknanya sama.</li>
-</ul>
-<div class="callout contoh"><span class="c-label">Contoh HOTS</span><p>Sebuah surat undangan gubernur diterima staf tata usaha, tetapi pimpinan sedang dinas luar. Tindakan paling tepat: catat surat, sampaikan kepada pejabat pengganti/PLH sesuai kewenangan, minta disposisi, lalu tindak lanjuti tanpa menunggu pimpinan kembali. Surat tidak boleh dibiarkan menumpuk hanya karena pimpinan tidak di tempat.</p></div>
-`
-    },
-    {
-      judul: "Kearsipan, teknologi kantor, dan keamanan data",
-      html: `
-<h3>1. Kearsipan</h3>
-<p>Arsip adalah rekaman kegiatan organisasi dalam berbagai bentuk dan media. Pengelolaan arsip bertujuan menjamin ketersediaan, keutuhan, keamanan, dan penyusutan yang tertib.</p>
-<div class="tbl-wrap"><table>
-<thead><tr><th>Klasifikasi</th><th>Makna</th><th>Contoh</th></tr></thead>
-<tbody>
-<tr><td>Arsip aktif</td><td>Masih sering dipakai untuk kegiatan sehari-hari.</td><td>Surat tugas pegawai yang masih berlaku.</td></tr>
-<tr><td>Arsip inaktif</td><td>Frekuensi pemakaian menurun, disimpan untuk kepentingan hukum/audit.</td><td>Dokumen pengadaan tahun lalu.</td></tr>
-<tr><td>Arsip vital</td><td>Mutlak diperlukan untuk kelangsungan organisasi.</td><td>Akta tanah, dokumen kepemilikan aset.</td></tr>
-<tr><td>Arsip statis</td><td>Memiliki nilai historis dan diserahkan ke lembaga kearsipan.</td><td>Dokumen sejarah instansi.</td></tr>
-</tbody></table></div>
-<p>Sistem penyimpanan dapat <b>sentralisasi</b> (satu pusat arsip) atau <b>desentralisasi</b> (tersebar per unit). <b>Jadwal retensi arsip</b> menentukan berapa lama arsip disimpan sebelum dinilai dan dimusnahkan. Pemusnahan harus melalui penilaian, berita acara, dan tidak boleh menghilangkan arsip yang masih dalam sengketa/audit.</p>
-
-<h3>2. Perangkat dan aplikasi kantor</h3>
-<div class="tbl-wrap"><table>
-<thead><tr><th>Kebutuhan</th><th>Perangkat/aplikasi yang tepat</th></tr></thead>
-<tbody>
-<tr><td>Mengetik dan menata naskah dinas</td><td>Microsoft Word atau pengolah kata sejenis.</td></tr>
-<tr><td>Mengelola kas kecil dan laporan keuangan sederhana</td><td>Microsoft Excel atau pengolah angka.</td></tr>
-<tr><td>Presentasi rapat</td><td>Microsoft PowerPoint atau aplikasi presentasi.</td></tr>
-<tr><td>Rapat daring</td><td>Zoom, Google Meet, Microsoft Teams.</td></tr>
-<tr><td>Persuratan elektronik</td><td>Sistem e-office/SRIKANDI atau aplikasi persuratan instansi.</td></tr>
-<tr><td>Penyimpanan bersama</td><td>Drive instansi dengan hak akses dan cadangan (backup).</td></tr>
-</tbody></table></div>
-<p>Perangkat komputer minimal terdiri atas <b>CPU, monitor, keyboard, dan mouse</b>. Perangkat keras lain seperti printer, scanner, dan UPS bersifat pendukung. Keamanan data menuntut kata sandi kuat, pembaruan perangkat lunak, cadangan berkala, serta pembatasan hak akses sesuai kebutuhan jabatan.</p>
-<div class="callout jebakan"><span class="c-label">Jebakan</span><p>Laporan keuangan kas kecil paling tepat dibuat dengan <b>Excel</b>, bukan Word. Word digunakan untuk naskah yang dominan teks. Menyimpan satu-satunya salinan dokumen penting hanya di flashdisk tanpa cadangan adalah praktik berisiko.</p></div>
-`
-    },
-    {
-      judul: "Rapat, K3 perkantoran, dan etika kerja",
-      html: `
-<h3>1. Rapat yang efektif</h3>
-<p>Dokumen yang disiapkan <b>sebelum</b> rapat: undangan, agenda, dan bahan rapat. Saat rapat: daftar hadir, notulen, dan pencatatan keputusan. Setelah rapat: notulen disahkan, keputusan didistribusikan, dan tindak lanjut dipantau.</p>
-<ul>
-<li>Undangan memuat waktu, tempat, agenda, dan pihak yang diundang.</li>
-<li>Agenda menjaga rapat tetap fokus dan mencegah pembahasan melebar.</li>
-<li>Notulen mencatat pokok pembahasan, keputusan, dan penanggung jawab tindak lanjut.</li>
-<li>Rapat tanpa agenda dan tanpa keputusan berisiko menjadi rapat yang tidak produktif.</li>
-</ul>
-
-<h3>2. Kesehatan dan keselamatan kerja (K3) kantor</h3>
-<p>K3 perkantoran mencakup ketersediaan <b>air bersih</b>, ventilasi dan pencahayaan yang memadai, kebersihan ruang, ergonomi meja-kursi, jalur evakuasi yang jelas, serta alat pemadam api ringan (APAR). Kesehatan kerja juga mencakup pencegahan kelelahan, pengaturan waktu istirahat, dan pemeriksaan kesehatan berkala.</p>
-<div class="def-grid">
-<div class="def"><b>Ergonomi</b>Posisi duduk, tinggi meja, dan letak monitor disesuaikan agar mengurangi cedera otot dan kelelahan.</div>
-<div class="def"><b>Kebersihan</b>Air bersih, sanitasi, dan pengelolaan sampah mencegah penyakit di lingkungan kerja.</div>
-<div class="def"><b>Keamanan</b>Akses ruang, penguncian dokumen, dan pengawasan tamu melindungi aset serta informasi.</div>
-<div class="def"><b>Etika</b>Ramah, sopan, tepat waktu, menjaga rahasia jabatan, dan tidak menyalahgunakan fasilitas kantor.</div>
-</div>
-
-<h3>3. Studi kasus terpadu</h3>
-<div class="callout contoh"><span class="c-label">Kasus</span><p>Seorang staf menerima surat penawaran kerja sama melalui surel. Lampirannya berformat <i>.exe</i> dan pengirim meminta segera dibuka karena “penawaran berakhir hari ini”. Staf tersebut juga harus menyiapkan laporan kas kecil untuk rapat esok hari.</p></div>
-<p><b>Analisis:</b> (1) jangan membuka lampiran <i>.exe</i>; verifikasi pengirim melalui kanal resmi; (2) teruskan ke unit TI/keamanan informasi; (3) laporan kas kecil disusun dengan Excel dan direviu atasan; (4) arsipkan surat dan bukti tindak lanjut. Tindakan ini menggabungkan keamanan informasi, manajemen perkantoran, dan etika kedinasan.</p>
-<div class="callout kunci"><span class="c-label">Rumus menjawab</span><p>Baca peran Anda → tentukan kewenangan → pilih tindakan yang <b>tidak melampaui wewenang</b> tetapi <b>tidak membiarkan masalah</b> → pastikan ada pencatatan, koordinasi, dan tindak lanjut.</p></div>
-`
-    }
-  ],
-  ringkasan: [
-    "Manajemen perkantoran = merencanakan, mengorganisasikan, mengarahkan, mengawasi, mengendalikan.",
-    "Disposisi dari atasan ke bawahan; laporan dari bawahan ke atasan; buku ekspedisi untuk pengiriman surat.",
-    "Surat eksternal dikirim ke pihak luar; surat dinas memakai kop dan bahasa resmi yang jelas, lugas, menarik, sopan.",
-    "Excel untuk kas kecil dan laporan keuangan; Word untuk naskah teks; perangkat minimal CPU, monitor, keyboard, mouse.",
-    "Dokumen rapat: undangan, agenda, bahan; hasil rapat: notulen dan daftar hadir.",
-    "K3 kantor: air bersih, ventilasi, pencahayaan, ergonomi, APAR, kebersihan."
-  ],
-  dasarHukum: [
-    "UU Nomor 43 Tahun 2009 tentang Kearsipan.",
-    "Peraturan Pemerintah Nomor 28 Tahun 2012 tentang Pelaksanaan UU Kearsipan.",
-    "Peraturan Menteri Pendayagunaan Aparatur Negara dan Reformasi Birokrasi tentang tata naskah dinas dan kearsipan.",
-    "UU Nomor 1 Tahun 1970 tentang Keselamatan Kerja (konteks K3)."
-  ]
-};
 
 window.UPKP_MATERI.kepegawaian = {
   id: "kepegawaian",
   judul: "Peraturan Kepegawaian",
   kelompok: "TKT",
-  urutan: 6,
+  urutan: 5,
   ringkas: "Manajemen ASN, peta jabatan dan eselon, angka kredit, PLH–PJ–PLT, disiplin PP 94/2021, serta pemberhentian dan pensiun.",
   estimasi: "30 menit",
   tujuan: [
@@ -290,7 +138,7 @@ window.UPKP_MATERI.pelayanan = {
   id: "pelayanan",
   judul: "Pelayanan Publik",
   kelompok: "TKT",
-  urutan: 7,
+  urutan: 6,
   ringkas: "Asas dan ruang lingkup pelayanan publik, 14 komponen standar pelayanan, PTSP/MPP, kualitas layanan, serta pengaduan dan survei kepuasan.",
   estimasi: "28 menit",
   tujuan: [
@@ -434,7 +282,7 @@ window.UPKP_MATERI["good-governance"] = {
   id: "good-governance",
   judul: "Good Governance",
   kelompok: "TKT",
-  urutan: 8,
+  urutan: 7,
   ringkas: "Prinsip tata kelola pemerintahan yang baik, asas umum pemerintahan, akuntabilitas, pengawasan, keterbukaan informasi, dan integritas.",
   estimasi: "27 menit",
   tujuan: [
@@ -559,7 +407,7 @@ window.UPKP_MATERI.kebijakan = {
   id: "kebijakan",
   judul: "Kebijakan Publik",
   kelompok: "TKT",
-  urutan: 9,
+  urutan: 8,
   ringkas: "Definisi dan bentuk kebijakan publik, siklus kebijakan, prinsip penyusunan, aktor, implementasi, serta evaluasi berbasis bukti.",
   estimasi: "26 menit",
   tujuan: [

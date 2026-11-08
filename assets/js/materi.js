@@ -65,7 +65,7 @@
     document.getElementById("view").innerHTML =
       '<div class="section-head" style="margin-top:0"><div><span class="eyebrow">Perpustakaan</span>' +
       '<h1 class="h1" style="margin-top:8px">Materi Pembelajaran</h1>' +
-      '<p class="lede" style="margin-top:8px">Empat belas modul yang diperluas dari kisi-kisi, field report, dan bocoran — bukan sekadar daftar poin.</p></div>' +
+      '<p class="lede" style="margin-top:8px">' + all.length + " modul yang diperluas dari kisi-kisi, field report, dan bocoran — bukan sekadar daftar poin.</p></div>" +
       '<div class="row"><span class="chip">' + Store.readCount() + " / " + all.length + " selesai</span></div></div>" +
       '<div class="filterbar">' +
         '<div class="search">' + UI.icon("search", 16) +
@@ -189,7 +189,7 @@
       a.addEventListener("click", function (e) {
         e.preventDefault();
         var target = document.getElementById("bagian-" + a.getAttribute("data-toc"));
-        if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
+        if (target) UI.scrollToEl(target);
       });
     });
 

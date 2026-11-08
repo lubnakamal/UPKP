@@ -86,17 +86,7 @@
       "</div>";
 
     var start = document.getElementById("startTryout");
-    if (start) start.addEventListener("click", function () {
-      if (Store.getSession()) {
-        UI.confirm({
-          title: "Mulai tryout baru?",
-          body: "Sesi yang sedang berjalan akan dibuang dan tidak dinilai.",
-          confirmText: "Ya, mulai baru",
-          danger: true,
-          onConfirm: function () { begin("tryout", null); }
-        });
-      } else begin("tryout", null);
-    });
+    if (start) start.addEventListener("click", function () { begin("tryout", null); });
     var drop = document.getElementById("dropSession");
     if (drop) drop.addEventListener("click", function () {
       UI.confirm({
@@ -149,6 +139,25 @@
   /* ---------- session lifecycle ---------- */
 
   function begin(mode, materiId) {
+    var active = Store.getSession();
+    if (active && !active.finished) {
+      var label = active.mode === "tryout"
+        ? "Tryout"
+        : 'Latihan "' + (active.materiNama || "") + '"';
+      UI.confirm({
+        title: "Ganti sesi yang sedang berjalan?",
+        body: label + " yang sedang berjalan akan dibuang dan tidak dinilai.",
+        confirmText: "Ya, ganti sesi",
+        cancelText: "Batal",
+        danger: true,
+        onConfirm: function () { startSession(mode, materiId); }
+      });
+      return;
+    }
+    startSession(mode, materiId);
+  }
+
+  function startSession(mode, materiId) {
     var qs = bank(mode).filter(function (q) { return mode === "tryout" || q.materi === materiId; });
     if (!qs.length) { UI.toast("Belum ada soal untuk materi ini", "bad"); return; }
     var now = Date.now();

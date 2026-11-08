@@ -7,7 +7,7 @@ window.UPKP_MATERI.inggris = {
   id: "inggris",
   judul: "Bahasa Inggris",
   kelompok: "TKP",
-  urutan: 12,
+  urutan: 11,
   ringkas: "Tenses, preposisi in/on/at, countable–uncountable, subject–verb agreement, comparative, passive voice, dan strategi reading teks pemerintahan.",
   estimasi: "30 menit",
   tujuan: [
@@ -182,7 +182,7 @@ window.UPKP_MATERI.literasi = {
   id: "literasi",
   judul: "Literasi Digital",
   kelompok: "TKP",
-  urutan: 13,
+  urutan: 12,
   ringkas: "Empat pilar literasi digital, etika dan jejak digital, keamanan siber, perlindungan data pribadi, serta 20 studi kasus HOTS.",
   estimasi: "30 menit",
   tujuan: [

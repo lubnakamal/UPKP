@@ -7,7 +7,7 @@ window.UPKP_MATERI.renstra = {
   id: "renstra",
   judul: "Renstra & Perencanaan Pembangunan Daerah",
   kelompok: "TSI",
-  urutan: 10,
+  urutan: 9,
   ringkas: "Siklus RPJPD–RPJMD–RKPD, kedudukan Renstra dan Renja, Musrenbang, indikator kinerja, serta pengendalian dan evaluasi perencanaan.",
   estimasi: "32 menit",
   tujuan: [
@@ -147,7 +147,7 @@ window.UPKP_MATERI.sotk = {
   id: "sotk",
   judul: "SOTK Pemerintah Provinsi",
   kelompok: "TSI",
-  urutan: 11,
+  urutan: 10,
   ringkas: "Susunan organisasi dan tata kerja Pemprov Jawa Tengah: Perda 5/2025, Pergub 1–4/2026, beda Dinas–Badan–UPTD–Cabdin, eselon, dan kedudukan Gubernur.",
   estimasi: "30 menit",
   tujuan: [

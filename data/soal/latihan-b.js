@@ -1,7 +1,7 @@
 /* ============================================================
-   Bank Soal Latihan — Bagian B (L051–L100)
-   Pelayanan 4, Good Governance 7, Kebijakan 7,
-   Renstra 9, SOTK 9, Bahasa Inggris 7, Literasi 7
+   Bank Soal Latihan — Bagian B (L051–L119)
+   Pelayanan 4, Good Governance 5, Kebijakan 5,
+   Renstra 15, SOTK 15, Bahasa Inggris 10, Literasi 5
    ============================================================ */
 window.SOAL_LATIHAN = (window.SOAL_LATIHAN || []).concat([
   {
@@ -154,82 +154,6 @@ window.SOAL_LATIHAN = (window.SOAL_LATIHAN || []).concat([
       "Kasus petugas menghadapi warga yang meminta layanan di luar prosedur.",
       "Kasus informasi layanan yang tidak konsisten.",
       "Soal standar waktu tanggapan pengaduan."
-    ]
-  },
-  {
-    id: "L055",
-    mode: "latihan",
-    kelompok: "TKT",
-    materi: "good-governance",
-    tipe: "Analisis",
-    stimulus: "Seorang pejabat mengeluarkan keputusan tanpa mempertimbangkan dampak bagi kelompok rentan, meskipun prosedur formalnya sudah terpenuhi.",
-    pertanyaan: "Asas umum pemerintahan yang paling relevan untuk dikritisi adalah …",
-    opsi: {
-      A: "Asas kepastian hukum semata.",
-      B: "Asas keterbukaan semata.",
-      C: "Asas kemanfaatan dan kepentingan umum.",
-      D: "Asas efisiensi anggaran.",
-      E: "Asas desentralisasi."
-    },
-    kunci: "C",
-    pembahasan: {
-      inti: "Keputusan yang formal benar tetapi mengabaikan dampak bagi publik dan kelompok rentan melanggar asas kemanfaatan dan kepentingan umum.",
-      benar: "Asas kemanfaatan menuntut keputusan memberi manfaat bagi kepentingan umum dan tidak merugikan kelompok rentan. Prosedur formal yang terpenuhi tidak cukup jika dampaknya tidak adil.",
-      opsi: {
-        A: "Kepastian hukum sudah terpenuhi secara formal.",
-        B: "Keterbukaan tidak disebut sebagai masalah utama.",
-        C: "Tepat. Kemanfaatan dan kepentingan umum.",
-        D: "Efisiensi anggaran bukan asas utama yang dilanggar.",
-        E: "Desentralisasi bukan asas AUPB dalam konteks ini."
-      },
-      dasar: [
-        "UU Nomor 30 Tahun 2014 tentang Administrasi Pemerintahan (AUPB).",
-        "Asas kemanfaatan dan kepentingan umum."
-      ],
-      jebakan: "Keputusan bisa sah secara prosedur tetapi tidak baik secara substansi. AUPB menilai keduanya."
-    },
-    variasi: [
-      "Kasus keputusan yang mengabaikan keberatan warga — asas keterbukaan.",
-      "Kasus keputusan berubah-ubah — asas kepastian hukum.",
-      "Soal delapan asas AUPB."
-    ]
-  },
-  {
-    id: "L056",
-    mode: "latihan",
-    kelompok: "TKT",
-    materi: "good-governance",
-    tipe: "Analisis",
-    stimulus: "Seorang kepala dinas melaporkan kinerjanya kepada gubernur. Pada waktu lain, ia juga menyampaikan laporan kepada masyarakat melalui forum publik.",
-    pertanyaan: "Jenis akuntabilitas yang ditunjukkan adalah …",
-    opsi: {
-      A: "Vertikal kepada gubernur dan sosial kepada masyarakat.",
-      B: "Horizontal kepada gubernur dan vertikal kepada masyarakat.",
-      C: "Hanya akuntabilitas keuangan.",
-      D: "Hanya akuntabilitas hukum.",
-      E: "Tidak ada akuntabilitas karena laporan bersifat sukarela."
-    },
-    kunci: "A",
-    pembahasan: {
-      inti: "Laporan kepada atasan bersifat vertikal; laporan kepada masyarakat bersifat sosial.",
-      benar: "Akuntabilitas vertikal mengarah kepada atasan atau lembaga yang lebih tinggi, yaitu gubernur. Akuntabilitas sosial mengarah kepada masyarakat sebagai pemangku kepentingan.",
-      opsi: {
-        A: "Tepat. Vertikal dan sosial.",
-        B: "Arahnya terbalik.",
-        C: "Akuntabilitas keuangan hanya salah satu dimensi.",
-        D: "Akuntabilitas hukum berkaitan dengan kepatuhan hukum.",
-        E: "Pelaporan tetap bentuk akuntabilitas."
-      },
-      dasar: [
-        "Konsep akuntabilitas dalam good governance.",
-        "Akuntabilitas vertikal, horizontal, diagonal, dan sosial."
-      ],
-      jebakan: "Gubernur bagi kepala dinas adalah atasan → vertikal. DPRD bagi kepala daerah → horizontal."
-    },
-    variasi: [
-      "Soal akuntabilitas kepala daerah kepada DPRD.",
-      "Soal akuntabilitas kinerja melalui SAKIP.",
-      "Soal akuntabilitas sosial melalui forum warga."
     ]
   },
   {
@@ -420,82 +344,6 @@ window.SOAL_LATIHAN = (window.SOAL_LATIHAN || []).concat([
       "Soal konsultasi publik dalam pembentukan perda.",
       "Soal akuntabilitas dan responsivitas.",
       "Soal tiga pilar good governance."
-    ]
-  },
-  {
-    id: "L062",
-    mode: "latihan",
-    kelompok: "TKT",
-    materi: "kebijakan",
-    tipe: "Analisis",
-    stimulus: "Sebuah masalah banjir tahunan telah lama terjadi, tetapi baru masuk prioritas pemerintah setelah korban jiwa meningkat dan tekanan media menguat.",
-    pertanyaan: "Tahap siklus kebijakan yang ditunjukkan adalah …",
-    opsi: {
-      A: "Agenda setting.",
-      B: "Formulasi kebijakan.",
-      C: "Adopsi kebijakan.",
-      D: "Implementasi kebijakan.",
-      E: "Evaluasi kebijakan."
-    },
-    kunci: "A",
-    pembahasan: {
-      inti: "Masuknya masalah ke prioritas pemerintah merupakan agenda setting.",
-      benar: "Peristiwa korban jiwa dan tekanan media mendorong pemerintah menaruh perhatian pada masalah banjir. Inilah agenda setting, yaitu proses masalah publik menjadi prioritas untuk ditangani.",
-      opsi: {
-        A: "Tepat. Masalah masuk agenda pemerintah.",
-        B: "Formulasi adalah perumusan alternatif kebijakan.",
-        C: "Adopsi adalah penetapan kebijakan.",
-        D: "Implementasi adalah pelaksanaan.",
-        E: "Evaluasi adalah penilaian hasil."
-      },
-      dasar: [
-        "Siklus kebijakan publik.",
-        "Peran media dan tekanan publik dalam agenda setting."
-      ],
-      jebakan: "Agenda setting sering dipicu oleh kejadian besar, tetapi tetap memerlukan proses politik dan administratif untuk menjadi prioritas."
-    },
-    variasi: [
-      "Soal aktor agenda setting.",
-      "Soal formulasi kebijakan.",
-      "Soal perbedaan agenda setting dan formulasi."
-    ]
-  },
-  {
-    id: "L063",
-    mode: "latihan",
-    kelompok: "TKT",
-    materi: "kebijakan",
-    tipe: "HOTS",
-    stimulus: "Sebuah kebijakan disusun dengan rinci oleh pemerintah pusat, lalu daerah diminta melaksanakan tanpa banyak penyesuaian. Di sisi lain, beberapa daerah mengusulkan pendekatan berbeda sesuai kondisi lokal.",
-    pertanyaan: "Perbandingan pendekatan yang paling tepat adalah …",
-    opsi: {
-      A: "Pendekatan top-down menekankan arahan pusat; pendekatan bottom-up memberi ruang inisiatif dan konteks lokal.",
-      B: "Pendekatan top-down memberi kebebasan penuh kepada daerah.",
-      C: "Pendekatan bottom-up selalu menolak kebijakan pusat.",
-      D: "Keduanya sama dan tidak ada perbedaan.",
-      E: "Pendekatan bottom-up hanya berlaku untuk kebijakan luar negeri."
-    },
-    kunci: "A",
-    pembahasan: {
-      inti: "Top-down berpusat pada arahan pusat; bottom-up menekankan inisiatif dan konteks lokal.",
-      benar: "Pendekatan top-down menekankan kepatuhan pelaksana terhadap arahan pusat. Pendekatan bottom-up menekankan partisipasi, inisiatif lokal, dan penyesuaian dengan kondisi daerah. Keduanya memiliki kelebihan dan keterbatasan.",
-      opsi: {
-        A: "Tepat. Perbedaan arah dan ruang inisiatif.",
-        B: "Top-down justru membatasi kebebasan daerah.",
-        C: "Bottom-up tidak menolak pusat, tetapi menekankan konteks lokal.",
-        D: "Keduanya berbeda.",
-        E: "Bottom-up tidak terbatas pada luar negeri."
-      },
-      dasar: [
-        "Model implementasi top-down dan bottom-up.",
-        "Siklus kebijakan publik."
-      ],
-      jebakan: "Dalam praktik, implementasi sering menggabungkan keduanya: arahan nasional dengan penyesuaian lokal."
-    },
-    variasi: [
-      "Soal kelebihan dan kekurangan top-down.",
-      "Soal partisipasi masyarakat dalam implementasi.",
-      "Soal model implementasi Edwards III."
     ]
   },
   {
@@ -1718,83 +1566,6 @@ window.SOAL_LATIHAN = (window.SOAL_LATIHAN || []).concat([
     ]
   },
   {
-    id: "L096",
-    mode: "latihan",
-    kelompok: "TKP",
-    materi: "literasi",
-    tipe: "Analisis",
-    stimulus: "Sebuah video viral menyebut bahwa meminum ramuan tertentu dapat menyembuhkan segala penyakit. Video tidak mencantumkan sumber medis dan meminta penonton segera membeli produk.",
-    pertanyaan: "Langkah verifikasi yang paling tepat adalah …",
-    opsi: {
-      A: "Langsung membeli karena video sudah viral.",
-      B: "Membagikan ke grup keluarga agar mereka sehat.",
-      C: "Mempercayai karena durasi videonya panjang.",
-      D: "Mengabaikan semua informasi kesehatan.",
-      E: "Memeriksa sumber resmi kesehatan, mencari bukti ilmiah, dan tidak membagikan sebelum terverifikasi."
-    },
-    kunci: "E",
-    pembahasan: {
-      inti: "Klaim kesehatan harus diverifikasi melalui sumber resmi dan bukti ilmiah.",
-      benar: "Cek sumber resmi seperti Kementerian Kesehatan atau organisasi profesi, telusuri bukti ilmiah, dan jangan menyebarkan klaim yang belum terverifikasi. Waspadai tujuan komersial.",
-      opsi: {
-        A: "Viral bukan bukti kebenaran.",
-        B: "Membagikan klaim belum terverifikasi berbahaya.",
-        C: "Durasi video bukan indikator kredibilitas.",
-        D: "Mengabaikan semua informasi kesehatan juga tidak tepat.",
-        E: "Tepat. Verifikasi sumber dan bukti."
-      },
-      dasar: [
-        "Langkah verifikasi hoaks.",
-        "Literasi kesehatan dan etika digital."
-      ],
-      jebakan: "Kesaksian pribadi dan testimoni bukan bukti ilmiah. Cari sumber primer dan kajian yang dapat dipertanggungjawabkan."
-    },
-    variasi: [
-      "Kasus hoaks politik.",
-      "Kasus foto lama dipakai untuk berita baru.",
-      "Soal peran ASN dalam pencegahan hoaks."
-    ]
-  },
-  {
-    id: "L097",
-    mode: "latihan",
-    kelompok: "TKP",
-    materi: "literasi",
-    tipe: "HOTS",
-    stimulus: "Seorang pegawai menggunakan akun media sosial pribadinya untuk mengkritik kebijakan instansinya dengan kata-kata kasar dan menyebut nama rekan kerja.",
-    pertanyaan: "Analisis yang paling tepat adalah …",
-    opsi: {
-      A: "Semua kritik terhadap instansi dilarang.",
-      B: "Kritik diperbolehkan, tetapi tutur kata kasar dan penyebutan nama pribadi melanggar etika digital dan kode etik ASN.",
-      C: "Media sosial pribadi sepenuhnya bebas dari kode etik.",
-      D: "Kata-kata kasar diperbolehkan jika kritiknya benar.",
-      E: "Penyebutan nama rekan kerja tidak masalah."
-    },
-    kunci: "B",
-    pembahasan: {
-      inti: "Kebebasan berpendapat tetap terikat etika digital dan kode etik ASN.",
-      benar: "ASN boleh menyampaikan kritik melalui cara yang santun dan proporsional. Namun, kata-kata kasar dan menyebut nama pribadi dapat melanggar etika digital, kode etik, dan berpotensi mencemarkan nama baik.",
-      opsi: {
-        A: "Kritik tidak dilarang secara umum.",
-        B: "Tepat. Kritik boleh, cara harus etis.",
-        C: "Kode etik tetap berlaku di ruang digital.",
-        D: "Kebenaran isi tidak membenarkan tutur kata kasar.",
-        E: "Menyebut nama pribadi berisiko melanggar privasi."
-      },
-      dasar: [
-        "UU Nomor 20 Tahun 2023 tentang ASN.",
-        "Kode etik ASN.",
-        "Pilar digital ethics."
-      ],
-      jebakan: "Soal ini menguji keseimbangan antara kebebasan berpendapat dan tanggung jawab etis."
-    },
-    variasi: [
-      "Kasus ASN menyebarkan hoaks.",
-      "Kasus perundungan daring di grup kantor.",
-      "Soal netralitas ASN di media sosial."
-    ]
-  },
-  {
     id: "L098",
     mode: "latihan",
     kelompok: "TKP",
@@ -1906,6 +1677,728 @@ window.SOAL_LATIHAN = (window.SOAL_LATIHAN || []).concat([
       "Kasus konflik di grup kantor.",
       "Kasus penyebaran hoaks di grup keluarga.",
       "Soal netiket dalam surel dinas."
+    ]
+  },
+  {
+    id: "L101",
+    mode: "latihan",
+    kelompok: "TWK",
+    materi: "pancasila",
+    tipe: "HOTS",
+    stimulus: "Seorang kepala desa mengutamakan kerabatnya sebagai penerima bantuan sosial, padahal masih banyak warga lain yang lebih miskin. Ia beralasan bahwa membantu keluarga adalah pengamalan sila ke-2, Kemanusiaan yang Adil dan Beradab.",
+    pertanyaan: "Analisis yang paling tepat adalah …",
+    opsi: {
+      A: "Perilaku itu salah memaknai sila ke-2; keadilan sosial bagi seluruh rakyat pada sila ke-5 menuntut bantuan diberikan berdasarkan kebutuhan, bukan hubungan kekerabatan.",
+      B: "Perilaku itu benar karena sila ke-2 mewajibkan membantu keluarga lebih dahulu.",
+      C: "Perilaku itu benar karena sila ke-5 hanya mengatur kesejahteraan, bukan bantuan sosial.",
+      D: "Perilaku itu tepat karena kepala desa berhak menentukan penerima tanpa kriteria.",
+      E: "Perilaku itu tidak berkaitan dengan Pancasila karena bersifat administratif."
+    },
+    kunci: "A",
+    pembahasan: {
+      inti: "Sila ke-2 menekankan kemanusiaan yang adil dan beradab, sedangkan ketidakadilan dalam pembagian bantuan justru melanggar nilai keadilan sosial pada sila ke-5.",
+      benar: "Membantu keluarga tidak otomatis salah, tetapi mendahulukan kerabat yang tidak berhak sementara warga miskin terabaikan bertentangan dengan keadilan. Sila ke-2 menuntut perlakuan manusiawi dan adil, sedangkan sila ke-5 menegaskan keadilan sosial bagi seluruh rakyat. Bantuan harus diberikan berdasarkan kriteria kebutuhan dan ketentuan yang berlaku.",
+      opsi: {
+        A: "Tepat. Keadilan sosial menuntut bantuan berdasarkan kebutuhan, bukan kekerabatan.",
+        B: "Membantu keluarga tidak boleh mengorbankan keadilan bagi warga yang lebih membutuhkan.",
+        C: "Sila ke-5 justru menjadi dasar penting dalam keadilan distribusi bantuan sosial.",
+        D: "Kewenangan kepala desa tetap terikat pada kriteria dan prosedur.",
+        E: "Keputusan administratif tetap mengandung nilai keadilan Pancasila."
+      },
+      dasar: [
+        "Pancasila, sila ke-2 dan sila ke-5.",
+        "Prinsip keadilan dalam pelayanan publik."
+      ],
+      jebakan: "Soal sering mempertentangkan “membantu keluarga” dengan keadilan sosial. Kunci pembedanya adalah apakah bantuan diberikan berdasarkan hak dan kebutuhan atau berdasarkan kedekatan."
+    },
+    variasi: [
+      "Kasus pembagian bantuan yang tidak transparan.",
+      "Kasus nepotisme dalam pelayanan publik.",
+      "Soal pengamalan sila ke-2 dan ke-5 yang sering tertukar."
+    ]
+  },
+  {
+    id: "L102",
+    mode: "latihan",
+    kelompok: "TWK",
+    materi: "uud",
+    tipe: "Analisis",
+    stimulus: "Seorang anggota DPRD menyatakan bahwa kewajiban mengalokasikan anggaran pendidikan minimal 20% hanya berlaku bagi pemerintah pusat, sedangkan pemerintah daerah bebas menentukan sendiri.",
+    pertanyaan: "Koreksi yang paling tepat berdasarkan UUD 1945 adalah …",
+    opsi: {
+      A: "Pernyataan itu benar karena daerah tidak terikat ketentuan UUD.",
+      B: "Pernyataan itu salah; Pasal 31 ayat (4) UUD 1945 mewajibkan pemerintah pusat dan daerah mengalokasikan anggaran pendidikan minimal 20% dari APBN dan APBD.",
+      C: "Pernyataan itu benar karena alokasi 20% hanya untuk gaji guru.",
+      D: "Pernyataan itu salah karena anggaran pendidikan diatur undang-undang biasa, bukan UUD.",
+      E: "Pernyataan itu benar karena daerah boleh mengalokasikan berapa saja."
+    },
+    kunci: "B",
+    pembahasan: {
+      inti: "Pasal 31 ayat (4) UUD 1945 mewajibkan pemerintah pusat dan daerah memprioritaskan anggaran pendidikan minimal 20% dari APBN dan APBD.",
+      benar: "Pasal 31 ayat (4) UUD 1945 menyatakan bahwa negara memprioritaskan anggaran pendidikan sekurang-kurangnya 20% dari APBN serta dari APBD untuk memenuhi kebutuhan penyelenggaraan pendidikan nasional. Kewajiban itu berlaku bagi pusat dan daerah, bukan hanya pusat.",
+      opsi: {
+        A: "Pemerintah daerah tetap terikat pada UUD 1945.",
+        B: "Tepat. Pasal 31 ayat (4) berlaku bagi APBN dan APBD.",
+        C: "Anggaran pendidikan mencakup lebih dari gaji guru.",
+        D: "Ketentuan 20% justru berada di UUD 1945, bukan hanya undang-undang biasa.",
+        E: "Daerah tidak bebas mengabaikan batas minimal yang ditetapkan UUD."
+      },
+      dasar: [
+        "UUD NRI Tahun 1945 Pasal 31 ayat (4).",
+        "Ketentuan anggaran pendidikan dalam APBN dan APBD."
+      ],
+      jebakan: "Angka 20% sering dikaitkan hanya dengan pemerintah pusat. Ingat bahwa bunyi pasal mencakup APBN dan APBD."
+    },
+    variasi: [
+      "Soal isi Pasal 31 UUD 1945.",
+      "Soal hak dan kewajiban negara di bidang pendidikan.",
+      "Soal alokasi anggaran pendidikan dalam APBD."
+    ]
+  },
+  {
+    id: "L103",
+    mode: "latihan",
+    kelompok: "TKT",
+    materi: "kepegawaian",
+    tipe: "Analisis",
+    stimulus: "Seorang staf menyusun daftar jabatan: Sekretaris Daerah Provinsi, Kepala Dinas, Kepala Bidang, dan Kepala Subbagian. Ia menandai semuanya sebagai JPT Pratama karena dianggap memimpin unit organisasi.",
+    pertanyaan: "Pasangan jabatan dan jenjang yang paling tepat adalah …",
+    opsi: {
+      A: "Sekretaris Daerah Provinsi = Administrator; Kepala Dinas = JPT Madya.",
+      B: "Kepala Bidang = JPT Pratama; Kepala Subbagian = Administrator.",
+      C: "Sekretaris Daerah Provinsi = JPT Madya; Kepala Dinas = JPT Pratama; Kepala Bidang = Administrator; Kepala Subbagian = Pengawas.",
+      D: "Seluruh jabatan tersebut termasuk JPT Pratama.",
+      E: "Kepala Subbagian = JPT Madya; Kepala Bidang = Pengawas."
+    },
+    kunci: "C",
+    pembahasan: {
+      inti: "Jenjang jabatan struktural: JPT Madya (eselon I), JPT Pratama (eselon II), Administrator (eselon III), dan Pengawas (eselon IV).",
+      benar: "Sekretaris Daerah Provinsi adalah JPT Madya (eselon I). Kepala Dinas adalah JPT Pratama (eselon II). Kepala Bidang adalah Administrator (eselon III). Kepala Subbagian adalah Pengawas (eselon IV).",
+      opsi: {
+        A: "Sekda Provinsi bukan Administrator, dan Kepala Dinas bukan JPT Madya.",
+        B: "Kepala Bidang adalah Administrator, bukan JPT Pratama; Kepala Subbagian adalah Pengawas, bukan Administrator.",
+        C: "Tepat. Seluruh pasangan jabatan dan jenjang sesuai peta jabatan.",
+        D: "Tidak semua jabatan tersebut JPT Pratama.",
+        E: "Kepala Subbagian bukan JPT Madya dan Kepala Bidang bukan Pengawas."
+      },
+      dasar: [
+        "UU Nomor 20 Tahun 2023 tentang Aparatur Sipil Negara.",
+        "Peta jabatan dan jenjang jabatan struktural ASN."
+      ],
+      jebakan: "Hafalkan pola: JPT Madya = I, JPT Pratama = II, Administrator = III, Pengawas = IV. Jangan menilai jenjang dari luasnya unit yang dipimpin."
+    },
+    variasi: [
+      "Soal menentukan jenjang jabatan berdasarkan nomenklatur.",
+      "Soal Sekretaris DPRD termasuk jabatan apa.",
+      "Soal membedakan jabatan struktural dan fungsional."
+    ]
+  },
+  {
+    id: "L104",
+    mode: "latihan",
+    kelompok: "TKT",
+    materi: "kepegawaian",
+    tipe: "Analisis",
+    stimulus: "Seorang PNS mengajukan surat pengunduran diri karena ingin pindah ke sektor swasta. Ia telah memenuhi seluruh prosedur, tidak sedang menjalani proses hukum, dan tidak memiliki kewajiban dinas yang belum diselesaikan.",
+    pertanyaan: "Jenis pemberhentian yang paling tepat adalah …",
+    opsi: {
+      A: "Pemberhentian tidak dengan hormat karena meninggalkan tugas.",
+      B: "Pemberhentian dengan hormat tidak atas permintaan sendiri.",
+      C: "Pemberhentian sementara sampai ada keputusan baru.",
+      D: "Pemberhentian atas permintaan sendiri.",
+      E: "Pensiun karena mencapai batas usia."
+    },
+    kunci: "D",
+    pembahasan: {
+      inti: "Pemberhentian atas permintaan sendiri terjadi ketika pegawai mengajukan pengunduran diri dan permohonannya disetujui.",
+      benar: "Karena yang bersangkutan sendiri mengajukan pengunduran diri melalui prosedur yang sah, jenis pemberhentiannya adalah atas permintaan sendiri. Ini berbeda dari pemberhentian dengan hormat tidak atas permintaan sendiri yang terjadi tanpa permohonan pegawai.",
+      opsi: {
+        A: "Tidak ada unsur meninggalkan tugas tanpa alasan dalam kasus ini.",
+        B: "Pemberhentian dengan hormat tidak atas permintaan sendiri justru bukan karena permohonan pegawai.",
+        C: "Pemberhentian sementara bukan status akhir bagi pengunduran diri yang sah.",
+        D: "Tepat. Pegawai mengajukan pengunduran diri sendiri.",
+        E: "Tidak ada keterangan mencapai batas usia pensiun."
+      },
+      dasar: [
+        "UU Nomor 20 Tahun 2023 tentang Aparatur Sipil Negara.",
+        "Ketentuan pemberhentian PNS atas permintaan sendiri."
+      ],
+      jebakan: "Bedakan “atas permintaan sendiri” (ada permohonan pegawai) dan “dengan hormat tidak atas permintaan sendiri” (diberhentikan tanpa permohonan, misalnya karena penyederhanaan organisasi)."
+    },
+    variasi: [
+      "Soal membedakan empat jenis pemberhentian.",
+      "Soal pengunduran diri PNS.",
+      "Soal pemberhentian karena penyederhanaan organisasi."
+    ]
+  },
+  {
+    id: "L105",
+    mode: "latihan",
+    kelompok: "TSI",
+    materi: "renstra",
+    tipe: "HOTS",
+    stimulus: "Seorang perencana menyusun dokumen dengan urutan: Renstra OPD lebih dahulu, lalu RPJMD, lalu RPJPD. Ia berpendapat urutan itu tidak masalah karena semuanya sama-sama dokumen perencanaan pembangunan.",
+    pertanyaan: "Analisis yang paling tepat adalah …",
+    opsi: {
+      A: "Urutan itu keliru; RPJPD menjadi pedoman RPJMD, dan RPJMD menjadi pedoman Renstra OPD, sehingga dokumen yang lebih strategis disusun lebih dahulu.",
+      B: "Urutan itu benar karena Renstra adalah dokumen paling teknis.",
+      C: "Urutan itu benar karena semua dokumen memiliki kedudukan setara.",
+      D: "Urutan itu keliru karena Renstra harus disusun sebelum RPJPD.",
+      E: "Urutan itu tidak penting karena dokumen hanya formalitas."
+    },
+    kunci: "A",
+    pembahasan: {
+      inti: "Hierarki perencanaan: RPJPD menjadi pedoman RPJMD, dan RPJMD menjadi pedoman Renstra OPD.",
+      benar: "Dokumen perencanaan memiliki hubungan bertingkat. RPJPD memuat visi dan arah pembangunan jangka panjang; RPJMD menjabarkannya untuk lima tahun; Renstra OPD menjabarkan RPJMD pada tingkat perangkat daerah. Karena itu RPJPD disusun lebih dahulu, diikuti RPJMD, lalu Renstra OPD.",
+      opsi: {
+        A: "Tepat. Hierarki dokumen menentukan urutan penyusunan.",
+        B: "Dokumen teknis tetap harus mengacu pada dokumen yang lebih strategis.",
+        C: "Kedudukan dokumen tidak setara; ada hubungan pedoman dan penjabaran.",
+        D: "Renstra justru mengacu pada RPJMD dan RPJPD.",
+        E: "Dokumen perencanaan bukan formalitas; ia mengikat alokasi dan kinerja."
+      },
+      dasar: [
+        "UU Nomor 25 Tahun 2004 tentang Sistem Perencanaan Pembangunan Nasional.",
+        "Hubungan RPJPD, RPJMD, dan Renstra OPD."
+      ],
+      jebakan: "Urutan penyusunan sering dibalik dalam soal. Ingat alurnya: jangka panjang (RPJPD) → jangka menengah (RPJMD) → perangkat daerah (Renstra)."
+    },
+    variasi: [
+      "Soal hierarki dokumen perencanaan.",
+      "Soal keterkaitan RPJMD dan Renstra OPD.",
+      "Soal periode berlaku RPJPD dan RPJMD."
+    ]
+  },
+  {
+    id: "L106",
+    mode: "latihan",
+    kelompok: "TSI",
+    materi: "renstra",
+    tipe: "HOTS",
+    stimulus: "Sebuah kecamatan mengusulkan kegiatan dalam Musrenbang, tetapi usulan itu tidak tercantum dalam Renstra OPD. Panitia mengatakan semua usulan harus diterima tanpa kajian agar masyarakat puas.",
+    pertanyaan: "Sikap yang paling tepat adalah …",
+    opsi: {
+      A: "Menolak semua usulan karena tidak ada dalam Renstra.",
+      B: "Menilai usulan berdasarkan kesesuaian dengan prioritas pembangunan, kewenangan, dan dokumen perencanaan; usulan yang sesuai dapat diakomodasi melalui mekanisme yang berlaku.",
+      C: "Menerima semua usulan tanpa kajian agar masyarakat puas.",
+      D: "Mengubah Renstra secara sepihak tanpa proses.",
+      E: "Menyerahkan keputusan sepenuhnya kepada konsultan."
+    },
+    kunci: "B",
+    pembahasan: {
+      inti: "Musrenbang adalah mekanisme partisipatif, tetapi usulan tetap harus dikaji kesesuaiannya dengan kewenangan, prioritas, dan dokumen perencanaan.",
+      benar: "Usulan masyarakat tidak otomatis ditolak hanya karena belum tercantum dalam Renstra, tetapi juga tidak otomatis diterima. Perlu kajian terhadap kesesuaian dengan kewenangan daerah, prioritas pembangunan, ketersediaan anggaran, dan dokumen perencanaan. Usulan yang layak dapat diakomodasi melalui mekanisme perubahan atau penyesuaian yang berlaku.",
+      opsi: {
+        A: "Menolak semua usulan mengabaikan nilai partisipatif Musrenbang.",
+        B: "Tepat. Usulan dikaji dan diakomodasi melalui mekanisme yang sah.",
+        C: "Menerima tanpa kajian berisiko tidak sesuai kewenangan dan anggaran.",
+        D: "Perubahan Renstra tidak boleh dilakukan sepihak tanpa proses.",
+        E: "Keputusan perencanaan tetap menjadi tanggung jawab pemerintah, bukan konsultan."
+      },
+      dasar: [
+        "UU Nomor 25 Tahun 2004 tentang Sistem Perencanaan Pembangunan Nasional.",
+        "Mekanisme Musrenbang dan penyelarasan dengan Renstra OPD."
+      ],
+      jebakan: "Partisipasi bukan berarti menerima semua usulan. Kunci jawaban biasanya menggabungkan penghargaan atas usulan masyarakat dengan kajian kewenangan dan dokumen perencanaan."
+    },
+    variasi: [
+      "Soal Musrenbang dan prioritas pembangunan.",
+      "Soal penyelarasan usulan masyarakat dengan Renstra.",
+      "Soal perencanaan partisipatif."
+    ]
+  },
+  {
+    id: "L107",
+    mode: "latihan",
+    kelompok: "TSI",
+    materi: "renstra",
+    tipe: "Terapan",
+    stimulus: "Sebuah OPD menetapkan indikator “meningkatkan kualitas pelayanan” tanpa angka, target, atau periode. Pada akhir tahun, capaian kinerja sulit dinilai karena tidak ada ukuran yang jelas.",
+    pertanyaan: "Perbaikan indikator yang paling tepat adalah …",
+    opsi: {
+      A: "Mengganti indikator dengan jumlah pegawai.",
+      B: "Menghapus indikator karena sulit diukur.",
+      C: "Merumuskan indikator yang spesifik, terukur, relevan, dan berbatas waktu, misalnya persentase kepuasan masyarakat dengan target dan periode tertentu.",
+      D: "Menilai kinerja berdasarkan kesan pimpinan.",
+      E: "Menggunakan jumlah kegiatan sebagai satu-satunya indikator."
+    },
+    kunci: "C",
+    pembahasan: {
+      inti: "Indikator kinerja harus spesifik, terukur, relevan, dan memiliki target serta periode waktu.",
+      benar: "Indikator yang baik memungkinkan capaian dinilai secara objektif. Rumusan seperti persentase kepuasan masyarakat dengan target dan periode tertentu memenuhi prinsip spesifik, terukur, relevan, dan berbatas waktu, sehingga dapat dipantau dan dievaluasi.",
+      opsi: {
+        A: "Jumlah pegawai bukan ukuran kualitas pelayanan.",
+        B: "Menghapus indikator menghilangkan dasar pengukuran.",
+        C: "Tepat. Indikator spesifik, terukur, relevan, dan berbatas waktu.",
+        D: "Kesan pimpinan bersifat subjektif dan tidak dapat diaudit.",
+        E: "Jumlah kegiatan belum tentu mencerminkan kualitas atau hasil."
+      },
+      dasar: [
+        "Prinsip indikator kinerja yang SMART.",
+        "Sistem Akuntabilitas Kinerja Instansi Pemerintah (SAKIP)."
+      ],
+      jebakan: "Indikator yang terdengar bagus tetapi tidak memiliki angka, target, dan waktu tetap sulit diukur. Pilih jawaban yang memuat unsur terukur dan berbatas waktu."
+    },
+    variasi: [
+      "Soal memperbaiki rumusan indikator kinerja.",
+      "Soal perbedaan output dan outcome.",
+      "Soal penyusunan target dalam Renstra."
+    ]
+  },
+  {
+    id: "L108",
+    mode: "latihan",
+    kelompok: "TSI",
+    materi: "renstra",
+    tipe: "HOTS",
+    stimulus: "Sebuah daerah menerima laporan bahwa layanan air bersih belum memenuhi Standar Pelayanan Minimal (SPM). Pemerintah daerah ingin menunda perbaikan karena keterbatasan anggaran.",
+    pertanyaan: "Analisis yang paling tepat adalah …",
+    opsi: {
+      A: "SPM hanya berlaku untuk pemerintah pusat.",
+      B: "SPM bersifat opsional jika anggaran terbatas.",
+      C: "Penundaan diperbolehkan tanpa batas waktu.",
+      D: "SPM merupakan kewajiban yang harus dipenuhi secara bertahap sesuai kemampuan, tetapi penundaan harus disertai perencanaan dan alokasi anggaran yang jelas.",
+      E: "SPM hanya berkaitan dengan administrasi, bukan layanan."
+    },
+    kunci: "D",
+    pembahasan: {
+      inti: "SPM adalah kewajiban pemerintah daerah; pemenuhannya dapat bertahap, tetapi tidak boleh diabaikan tanpa perencanaan.",
+      benar: "SPM menetapkan jenis dan mutu pelayanan dasar yang wajib dipenuhi pemerintah daerah. Keterbatasan anggaran dapat memengaruhi tahapan pemenuhan, tetapi pemerintah tetap wajib merencanakan, mengalokasikan anggaran, dan menunjukkan upaya pemenuhan secara bertahap dan terukur.",
+      opsi: {
+        A: "SPM juga menjadi kewajiban pemerintah daerah.",
+        B: "SPM bukan opsional; ia kewajiban pelayanan dasar.",
+        C: "Penundaan tanpa batas dan tanpa perencanaan tidak dapat dibenarkan.",
+        D: "Tepat. Pemenuhan bertahap tetap disertai perencanaan dan anggaran.",
+        E: "SPM berkaitan langsung dengan mutu layanan, bukan sekadar administrasi."
+      },
+      dasar: [
+        "Ketentuan Standar Pelayanan Minimal.",
+        "Kewajiban pemerintah daerah dalam pelayanan dasar."
+      ],
+      jebakan: "Keterbatasan anggaran sering dijadikan alasan menunda tanpa batas. Jawaban yang tepat biasanya menekankan kewajiban tetap ada, dengan pemenuhan bertahap yang terencana."
+    },
+    variasi: [
+      "Soal SPM dan pelayanan dasar.",
+      "Soal kewajiban daerah saat anggaran terbatas.",
+      "Soal hubungan SPM dan perencanaan pembangunan."
+    ]
+  },
+  {
+    id: "L109",
+    mode: "latihan",
+    kelompok: "TSI",
+    materi: "renstra",
+    tipe: "Analisis",
+    stimulus: "Laporan akuntabilitas kinerja sebuah OPD hanya memuat daftar kegiatan dan serapan anggaran. Laporan itu tidak menjelaskan capaian indikator, dampak, kendala, maupun rencana tindak lanjut.",
+    pertanyaan: "Perbaikan yang paling tepat adalah …",
+    opsi: {
+      A: "Menambah foto kegiatan agar laporan terlihat menarik.",
+      B: "Menghapus bagian kendala agar laporan terlihat baik.",
+      C: "Menyajikan hanya angka serapan anggaran.",
+      D: "Menyalin laporan tahun sebelumnya.",
+      E: "Menyajikan capaian indikator, analisis efisiensi, dampak, kendala, dan rencana tindak lanjut."
+    },
+    kunci: "E",
+    pembahasan: {
+      inti: "Laporan akuntabilitas kinerja harus menjelaskan capaian indikator, efisiensi, dampak, kendala, dan tindak lanjut, bukan sekadar daftar kegiatan.",
+      benar: "Laporan kinerja yang baik menghubungkan anggaran dengan hasil. Capaian indikator, analisis efisiensi, dampak, kendala, dan rencana tindak lanjut memungkinkan pembaca menilai apakah program berjalan efektif dan apa yang perlu diperbaiki.",
+      opsi: {
+        A: "Foto kegiatan tidak menggantikan analisis capaian dan dampak.",
+        B: "Menyembunyikan kendala justru melemahkan akuntabilitas.",
+        C: "Serapan anggaran saja tidak menunjukkan hasil atau dampak.",
+        D: "Menyalin laporan lama membuat laporan tidak faktual.",
+        E: "Tepat. Laporan memuat capaian, dampak, kendala, dan tindak lanjut."
+      },
+      dasar: [
+        "Sistem Akuntabilitas Kinerja Instansi Pemerintah (SAKIP).",
+        "Prinsip laporan kinerja yang akuntabel dan berorientasi hasil."
+      ],
+      jebakan: "Laporan yang tebal dan penuh foto belum tentu akuntabel. Yang dinilai adalah kejelasan capaian indikator dan kaitannya dengan anggaran serta dampak."
+    },
+    variasi: [
+      "Soal komponen laporan akuntabilitas kinerja.",
+      "Soal perbedaan output dan outcome dalam laporan.",
+      "Soal evaluasi kinerja OPD."
+    ]
+  },
+  {
+    id: "L110",
+    mode: "latihan",
+    kelompok: "TSI",
+    materi: "renstra",
+    tipe: "HOTS",
+    stimulus: "Sebuah pemerintah daerah menyusun RPJMD tanpa melibatkan masyarakat dan tanpa memperhatikan RPJPD. Dokumen itu kemudian ditetapkan sebagai dasar perencanaan lima tahun.",
+    pertanyaan: "Risiko dan tindakan korektif yang paling tepat adalah …",
+    opsi: {
+      A: "Tidak ada masalah karena RPJMD cukup disusun oleh pemerintah.",
+      B: "RPJMD tetap sah karena pelibatan masyarakat tidak wajib.",
+      C: "Cukup memperbaiki format dokumen agar sesuai template.",
+      D: "Mengabaikan RPJPD karena periodenya berbeda.",
+      E: "Dokumen berisiko tidak sinkron dan kehilangan legitimasi; perlu penyelarasan dengan RPJPD serta pelibatan masyarakat melalui mekanisme perencanaan partisipatif."
+    },
+    kunci: "E",
+    pembahasan: {
+      inti: "RPJMD harus selaras dengan RPJPD dan disusun melalui proses partisipatif; jika tidak, dokumen berisiko tidak sinkron dan kehilangan legitimasi.",
+      benar: "RPJMD menjabarkan RPJPD untuk periode lima tahun dan wajib memperhatikan aspirasi masyarakat melalui mekanisme perencanaan partisipatif. Mengabaikan keduanya menimbulkan risiko ketidaksinkronan antar dokumen, lemahnya dukungan publik, dan masalah dalam pelaksanaan serta pertanggungjawaban.",
+      opsi: {
+        A: "Perencanaan pembangunan tidak cukup dilakukan secara tertutup.",
+        B: "Pelibatan masyarakat merupakan bagian dari prinsip perencanaan partisipatif.",
+        C: "Masalahnya bukan format, melainkan substansi dan proses.",
+        D: "RPJPD justru menjadi acuan jangka panjang bagi RPJMD.",
+        E: "Tepat. Perlu penyelarasan dengan RPJPD dan pelibatan masyarakat."
+      },
+      dasar: [
+        "UU Nomor 25 Tahun 2004 tentang Sistem Perencanaan Pembangunan Nasional.",
+        "Prinsip perencanaan pembangunan yang partisipatif dan berkelanjutan."
+      ],
+      jebakan: "Soal sering menawarkan perbaikan format atau administrasi. Fokus koreksi yang benar adalah substansi keselarasan dokumen dan proses partisipatif."
+    },
+    variasi: [
+      "Soal prinsip perencanaan partisipatif.",
+      "Soal konsistensi RPJPD dan RPJMD.",
+      "Soal akibat dokumen perencanaan yang tidak sinkron."
+    ]
+  },
+  {
+    id: "L111",
+    mode: "latihan",
+    kelompok: "TSI",
+    materi: "sotk",
+    tipe: "Analisis",
+    stimulus: "Seorang staf bingung membedakan Badan dan Dinas. Ia menyebut Badan selalu melaksanakan urusan teknis di lapangan, sedangkan Dinas hanya menunjang kegiatan internasional.",
+    pertanyaan: "Penjelasan yang paling tepat adalah …",
+    opsi: {
+      A: "Dinas melaksanakan urusan pemerintahan yang menjadi kewenangan daerah dan bersifat teknis operasional, sedangkan Badan mendukung pelaksanaan fungsi tertentu seperti penelitian, pengembangan, dan perencanaan.",
+      B: "Badan selalu lebih tinggi daripada Dinas dalam semua hal.",
+      C: "Dinas hanya menangani administrasi internal.",
+      D: "Badan dan Dinas tidak memiliki perbedaan.",
+      E: "Badan hanya ada di tingkat kecamatan."
+    },
+    kunci: "A",
+    pembahasan: {
+      inti: "Dinas bersifat teknis operasional dalam urusan pemerintahan, sedangkan Badan mendukung fungsi tertentu seperti penelitian, pengembangan, dan perencanaan.",
+      benar: "Dalam SOTK, Dinas melaksanakan urusan pemerintahan yang menjadi kewenangan daerah dan bersifat teknis operasional. Badan mendukung pelaksanaan fungsi tertentu, misalnya perencanaan, penelitian dan pengembangan, kepegawaian, atau fungsi penunjang lainnya sesuai ketentuan.",
+      opsi: {
+        A: "Tepat. Dinas bersifat teknis operasional; Badan mendukung fungsi tertentu.",
+        B: "Kedudukan keduanya tidak ditentukan oleh superioritas umum, melainkan jenis tugas.",
+        C: "Dinas tidak hanya menangani administrasi internal.",
+        D: "Badan dan Dinas memiliki perbedaan tugas dan fungsi.",
+        E: "Badan tidak hanya ada di tingkat kecamatan."
+      },
+      dasar: [
+        "Ketentuan SOTK perangkat daerah.",
+        "Pembedaan Dinas dan Badan dalam organisasi pemerintah daerah."
+      ],
+      jebakan: "Jangan menghafal “Badan lebih tinggi dari Dinas”. Yang membedakan adalah jenis fungsi: teknis operasional versus penunjang tertentu."
+    },
+    variasi: [
+      "Soal menentukan perangkat daerah yang tepat untuk suatu urusan.",
+      "Soal perbedaan Dinas, Badan, dan Sekretariat.",
+      "Soal SOTK pemerintah provinsi."
+    ]
+  },
+  {
+    id: "L112",
+    mode: "latihan",
+    kelompok: "TSI",
+    materi: "sotk",
+    tipe: "Analisis",
+    stimulus: "Seorang warga menyebut Sekretaris DPRD sebagai pejabat politik yang dipilih rakyat karena bekerja di lembaga legislatif.",
+    pertanyaan: "Koreksi yang paling tepat adalah …",
+    opsi: {
+      A: "Benar, Sekretaris DPRD dipilih melalui pemilu.",
+      B: "Salah; Sekretaris DPRD adalah jabatan karier ASN, umumnya JPT Pratama, yang mendukung tugas dan fungsi DPRD, bukan pejabat politik.",
+      C: "Benar, Sekretaris DPRD setara dengan gubernur.",
+      D: "Salah; Sekretaris DPRD adalah jabatan fungsional.",
+      E: "Salah; Sekretaris DPRD dipilih oleh anggota DPRD."
+    },
+    kunci: "B",
+    pembahasan: {
+      inti: "Sekretaris DPRD adalah jabatan karier ASN, umumnya JPT Pratama, yang mendukung tugas dan fungsi DPRD.",
+      benar: "Sekretaris DPRD atau Sekwan bukan pejabat politik. Ia adalah ASN karier yang menduduki jabatan pimpinan tinggi pratama dan bertugas mendukung pelaksanaan tugas serta fungsi DPRD. Di provinsi umumnya eselon II.a, sedangkan di kabupaten/kota eselon II.b.",
+      opsi: {
+        A: "Sekretaris DPRD tidak dipilih melalui pemilu.",
+        B: "Tepat. Sekwan adalah jabatan karier ASN, bukan pejabat politik.",
+        C: "Sekretaris DPRD tidak setara dengan gubernur.",
+        D: "Sekretaris DPRD adalah jabatan struktural JPT Pratama, bukan jabatan fungsional.",
+        E: "Sekretaris DPRD tidak dipilih oleh anggota DPRD."
+      },
+      dasar: [
+        "Ketentuan SOTK Sekretariat DPRD.",
+        "Kedudukan Sekretaris DPRD sebagai JPT Pratama."
+      ],
+      jebakan: "Bekerja di lembaga legislatif tidak otomatis berarti pejabat politik. Sekwan adalah ASN karier yang mendukung DPRD."
+    },
+    variasi: [
+      "Soal kedudukan Sekretaris DPRD.",
+      "Soal eselon Sekwan provinsi dan kabupaten/kota.",
+      "Soal perbedaan pejabat politik dan jabatan karier ASN."
+    ]
+  },
+  {
+    id: "L113",
+    mode: "latihan",
+    kelompok: "TSI",
+    materi: "sotk",
+    tipe: "HOTS",
+    stimulus: "Sebuah provinsi mengklaim berwenang mengelola seluruh urusan pendidikan dasar dan menengah tanpa melibatkan kabupaten/kota. Ia beralasan provinsi memiliki kedudukan lebih tinggi.",
+    pertanyaan: "Analisis yang paling tepat adalah …",
+    opsi: {
+      A: "Provinsi berwenang penuh atas semua urusan pemerintahan.",
+      B: "Kabupaten/kota tidak memiliki urusan pendidikan.",
+      C: "Provinsi hanya mengoordinasikan tanpa kewenangan apa pun.",
+      D: "Pembagian urusan harus mengikuti ketentuan perundang-undangan; pengelolaan pendidikan dasar dan menengah umumnya menjadi kewenangan kabupaten/kota, sementara provinsi memiliki kewenangan tertentu sesuai norma yang berlaku.",
+      E: "Semua urusan pendidikan diserahkan sepenuhnya ke pemerintah pusat."
+    },
+    kunci: "D",
+    pembahasan: {
+      inti: "Pembagian urusan pemerintahan tidak ditentukan oleh tingginya kedudukan, melainkan oleh norma dan pembagian kewenangan yang berlaku.",
+      benar: "Dalam otonomi daerah, urusan pemerintahan dibagi antara pusat, provinsi, dan kabupaten/kota sesuai perundang-undangan. Pendidikan dasar dan menengah umumnya menjadi urusan kabupaten/kota, sedangkan provinsi memiliki kewenangan tertentu, misalnya pendidikan menengah dalam rezim yang berlaku dan fungsi koordinasi. Klaim sepihak tanpa dasar norma tidak dapat dibenarkan.",
+      opsi: {
+        A: "Provinsi tidak berwenang penuh atas semua urusan.",
+        B: "Kabupaten/kota memiliki urusan pendidikan sesuai pembagian kewenangan.",
+        C: "Provinsi tetap memiliki kewenangan tertentu, bukan hanya koordinasi tanpa kewenangan.",
+        D: "Tepat. Kewenangan mengikuti pembagian urusan yang diatur perundang-undangan.",
+        E: "Tidak semua urusan pendidikan diserahkan ke pusat."
+      },
+      dasar: [
+        "UU Nomor 23 Tahun 2014 tentang Pemerintahan Daerah.",
+        "Pembagian urusan pemerintahan pusat, provinsi, dan kabupaten/kota."
+      ],
+      jebakan: "Kedudukan pemerintahan yang lebih tinggi tidak otomatis berarti mengambil alih semua urusan. Jawaban yang tepat merujuk pada pembagian kewenangan yang diatur."
+    },
+    variasi: [
+      "Soal pembagian urusan pusat dan daerah.",
+      "Soal kewenangan provinsi di bidang pendidikan.",
+      "Soal otonomi daerah dan desentralisasi."
+    ]
+  },
+  {
+    id: "L114",
+    mode: "latihan",
+    kelompok: "TSI",
+    materi: "sotk",
+    tipe: "HOTS",
+    stimulus: "Sebuah daerah akan menyederhanakan SOTK. Sebagian pejabat khawatir kehilangan jabatan sehingga menolak kajian dan meminta struktur dipertahankan apa adanya.",
+    pertanyaan: "Prinsip yang paling tepat adalah …",
+    opsi: {
+      A: "Mempertahankan semua struktur agar tidak ada konflik.",
+      B: "Menambah jabatan baru agar semua pejabat terakomodasi.",
+      C: "Menyerahkan keputusan kepada pejabat yang paling senior.",
+      D: "Menghindari evaluasi karena sensitif.",
+      E: "Evaluasi SOTK dilakukan berdasarkan kebutuhan organisasi, beban kerja, dan ketentuan perundang-undangan, dengan memperhatikan prinsip efisiensi dan akuntabilitas."
+    },
+    kunci: "E",
+    pembahasan: {
+      inti: "Evaluasi SOTK harus didasarkan pada kebutuhan organisasi, beban kerja, dan ketentuan, bukan pada kepentingan mempertahankan jabatan.",
+      benar: "Penyederhanaan SOTK bertujuan menciptakan organisasi yang efisien, efektif, dan akuntabel. Kajian dilakukan berdasarkan kebutuhan organisasi, beban kerja, rentang kendali, dan ketentuan perundang-undangan. Resistensi karena kepentingan jabatan tidak boleh menggantikan dasar objektif tersebut.",
+      opsi: {
+        A: "Mempertahankan struktur tanpa kajian mengabaikan prinsip efisiensi.",
+        B: "Menambah jabatan justru memperbesar struktur dan beban anggaran.",
+        C: "Senioritas bukan dasar utama evaluasi SOTK.",
+        D: "Menghindari evaluasi tidak menyelesaikan persoalan organisasi.",
+        E: "Tepat. Evaluasi berbasis kebutuhan, beban kerja, efisiensi, dan akuntabilitas."
+      },
+      dasar: [
+        "Ketentuan evaluasi SOTK perangkat daerah.",
+        "Prinsip efisiensi, efektivitas, dan akuntabilitas organisasi."
+      ],
+      jebakan: "Soal sensitif tentang penyederhanaan sering menawarkan jawaban “menghindari konflik”. Yang benar adalah tetap melakukan kajian objektif sesuai ketentuan."
+    },
+    variasi: [
+      "Soal tujuan penyederhanaan SOTK.",
+      "Soal dasar evaluasi struktur organisasi.",
+      "Soal resistensi terhadap perubahan organisasi."
+    ]
+  },
+  {
+    id: "L115",
+    mode: "latihan",
+    kelompok: "TSI",
+    materi: "sotk",
+    tipe: "Analisis",
+    stimulus: "Sebuah pemerintah daerah membentuk perangkat daerah baru tanpa dasar hukum yang jelas dan tanpa persetujuan pejabat yang berwenang. Ia beralasan pembentukan itu dilakukan untuk mempercepat pelayanan.",
+    pertanyaan: "Analisis yang paling tepat adalah …",
+    opsi: {
+      A: "Pembentukan itu sah karena tujuannya baik.",
+      B: "Pembentukan itu sah asal tersedia anggaran.",
+      C: "Pembentukan itu tidak memerlukan dasar hukum.",
+      D: "Pembentukan itu cukup diumumkan di media.",
+      E: "Pembentukan perangkat daerah harus berdasarkan peraturan perundang-undangan dan melalui prosedur yang berlaku; tujuan baik tidak menggantikan dasar hukum."
+    },
+    kunci: "E",
+    pembahasan: {
+      inti: "Pembentukan perangkat daerah wajib memiliki dasar hukum dan mengikuti prosedur yang berlaku.",
+      benar: "SOTK perangkat daerah dibentuk berdasarkan peraturan perundang-undangan dan melalui mekanisme yang ditetapkan, termasuk evaluasi dan persetujuan yang berwenang. Tujuan mempercepat pelayanan tidak dapat menggantikan dasar hukum, karena akan menimbulkan masalah legitimasi, anggaran, dan pertanggungjawaban.",
+      opsi: {
+        A: "Tujuan baik tidak menghapus kewajiban dasar hukum.",
+        B: "Ketersediaan anggaran bukan dasar satu-satunya pembentukan perangkat daerah.",
+        C: "Pembentukan perangkat daerah justru memerlukan dasar hukum.",
+        D: "Pengumuman di media bukan prosedur pembentukan.",
+        E: "Tepat. Dasar hukum dan prosedur wajib dipenuhi."
+      },
+      dasar: [
+        "UU Nomor 23 Tahun 2014 tentang Pemerintahan Daerah.",
+        "Ketentuan pembentukan dan susunan perangkat daerah."
+      ],
+      jebakan: "Alasan “untuk pelayanan” sering dipakai untuk membenarkan prosedur yang salah. Dalam soal SOTK, legalitas tetap menjadi syarat utama."
+    },
+    variasi: [
+      "Soal prosedur pembentukan perangkat daerah.",
+      "Soal dasar hukum SOTK.",
+      "Soal akibat pembentukan organisasi tanpa dasar hukum."
+    ]
+  },
+  {
+    id: "L116",
+    mode: "latihan",
+    kelompok: "TSI",
+    materi: "sotk",
+    tipe: "HOTS",
+    stimulus: "Dua perangkat daerah memiliki tugas dan fungsi yang tumpang tindih dalam pengelolaan data. Keduanya mengklaim berwenang dan menolak berkoordinasi.",
+    pertanyaan: "Penyelesaian yang paling tepat adalah …",
+    opsi: {
+      A: "Membiarkan keduanya bekerja sendiri-sendiri.",
+      B: "Menyerahkan seluruh data ke pihak ketiga.",
+      C: "Menghapus salah satu perangkat daerah tanpa kajian.",
+      D: "Menunggu konflik berkepanjangan.",
+      E: "Meninjau tupoksi dan melakukan klarifikasi batas kewenangan, lalu menyusun mekanisme koordinasi dan pembagian tugas yang jelas sesuai SOTK."
+    },
+    kunci: "E",
+    pembahasan: {
+      inti: "Tumpang tindih tupoksi diselesaikan dengan klarifikasi batas kewenangan dan mekanisme koordinasi, bukan dengan membiarkan konflik.",
+      benar: "Tumpang tindih tugas dan fungsi perlu diselesaikan melalui peninjauan SOTK, klarifikasi batas kewenangan, serta penyusunan mekanisme koordinasi dan pembagian tugas. Langkah ini menjaga akuntabilitas dan mencegah duplikasi pekerjaan tanpa harus menghapus unit secara tergesa-gesa.",
+      opsi: {
+        A: "Membiarkan kedua unit bekerja sendiri-sendiri menimbulkan duplikasi dan konflik.",
+        B: "Menyerahkan data ke pihak ketiga tidak menyelesaikan persoalan kewenangan.",
+        C: "Menghapus unit tanpa kajian dapat mengganggu layanan.",
+        D: "Menunggu konflik memperburuk kinerja organisasi.",
+        E: "Tepat. Klarifikasi kewenangan dan mekanisme koordinasi sesuai SOTK."
+      },
+      dasar: [
+        "Ketentuan SOTK dan tupoksi perangkat daerah.",
+        "Prinsip koordinasi dan akuntabilitas organisasi."
+      ],
+      jebakan: "Jawaban ekstrem seperti menghapus unit atau menyerahkan ke pihak ketiga biasanya salah. Penyelesaian yang tepat bersifat korektif dan berbasis tupoksi."
+    },
+    variasi: [
+      "Soal tumpang tindih kewenangan antar-OPD.",
+      "Soal koordinasi antarperangkat daerah.",
+      "Soal evaluasi tupoksi."
+    ]
+  },
+  {
+    id: "L117",
+    mode: "latihan",
+    kelompok: "TKP",
+    materi: "inggris",
+    tipe: "Grammar",
+    stimulus: "The meeting will be held ___ Monday ___ 9 a.m. ___ the main hall.",
+    pertanyaan: "The correct prepositions to complete the sentence are …",
+    opsi: {
+      A: "in, on, at",
+      B: "on, at, in",
+      C: "at, in, on",
+      D: "on, in, at",
+      E: "in, at, on"
+    },
+    kunci: "B",
+    pembahasan: {
+      inti: "Gunakan “on” untuk hari, “at” untuk waktu jam, dan “in” untuk ruang tertutup.",
+      benar: "Kita menggunakan “on” sebelum nama hari (on Monday), “at” sebelum waktu yang spesifik (at 9 a.m.), dan “in” untuk tempat tertutup atau ruangan (in the main hall).",
+      opsi: {
+        A: "“in Monday” dan “on 9 a.m.” tidak tepat.",
+        B: "Tepat. on Monday, at 9 a.m., in the main hall.",
+        C: "“at Monday” dan “in 9 a.m.” tidak tepat.",
+        D: "“in 9 a.m.” dan “at the main hall” tidak tepat untuk konteks ini.",
+        E: "“in Monday” dan “on 9 a.m.” tidak tepat."
+      },
+      dasar: [
+        "Prepositions of time: in, on, at.",
+        "Prepositions of place: in, on, at."
+      ],
+      jebakan: "Hafalkan pola umum: on + hari/tanggal, at + jam, in + bulan/tahun/ruangan. Pengecualian tetap ada, tetapi pola ini menyelesaikan sebagian besar soal."
+    },
+    variasi: [
+      "Soal preposisi waktu in/on/at.",
+      "Soal preposisi tempat.",
+      "Soal melengkapi kalimat undangan rapat."
+    ]
+  },
+  {
+    id: "L118",
+    mode: "latihan",
+    kelompok: "TKP",
+    materi: "inggris",
+    tipe: "Grammar",
+    stimulus: "Each of the reports ___ to be submitted before the deadline, and the committee ___ reviewing them now.",
+    pertanyaan: "The correct verb forms to complete the sentence are …",
+    opsi: {
+      A: "were / is",
+      B: "is / is",
+      C: "are / are",
+      D: "is / are",
+      E: "were / are"
+    },
+    kunci: "B",
+    pembahasan: {
+      inti: "“Each of” diikuti kata kerja tunggal, dan “the committee” sebagai satu kesatuan juga menggunakan kata kerja tunggal.",
+      benar: "Subjek “each of the reports” bersifat tunggal, sehingga menggunakan “is”. Kata “committee” dipandang sebagai satu badan/kesatuan, sehingga menggunakan “is”. Jadi bentuk yang tepat adalah “is / is”.",
+      opsi: {
+        A: "“were” tidak sesuai dengan subjek tunggal “each”.",
+        B: "Tepat. Kedua subjek diperlakukan tunggal.",
+        C: "“are” tidak sesuai dengan “each” dan “committee” sebagai kesatuan.",
+        D: "Bagian kedua seharusnya “is”, bukan “are”.",
+        E: "Kedua bentuk tidak sesuai dengan subjek tunggal."
+      },
+      dasar: [
+        "Subject–verb agreement.",
+        "Penggunaan “each of” dan collective nouns."
+      ],
+      jebakan: "Kata benda jamak setelah “each of” sering mengecoh. Subjek intinya adalah “each”, yang tunggal. Begitu pula “committee” dapat dianggap tunggal."
+    },
+    variasi: [
+      "Soal subject–verb agreement dengan “each”.",
+      "Soal collective nouns.",
+      "Soal tenses dalam kalimat majemuk."
+    ]
+  },
+  {
+    id: "L119",
+    mode: "latihan",
+    kelompok: "TKP",
+    materi: "inggris",
+    tipe: "Reading",
+    stimulus: "A government office introduced a digital queue system to reduce waiting time. The system worked well for most visitors, but some elderly citizens struggled to use the touchscreen. The office then added a staffed help desk and a manual queue for visitors who needed assistance.",
+    pertanyaan: "What is the main lesson from the passage?",
+    opsi: {
+      A: "Digital systems should be avoided because they are difficult.",
+      B: "Elderly citizens should not use public services.",
+      C: "Technology always increases efficiency without any problems.",
+      D: "Manual queues are always better than digital ones.",
+      E: "Digital innovation should be accompanied by inclusive support so that all users can access services."
+    },
+    kunci: "E",
+    pembahasan: {
+      inti: "Inovasi digital perlu disertai dukungan inklusif agar semua kelompok pengguna dapat mengakses layanan.",
+      benar: "Teks menunjukkan bahwa sistem antrean digital berhasil bagi sebagian besar pengunjung, tetapi menyulitkan sebagian warga lanjut usia. Respons yang tepat adalah menambahkan meja bantuan dan antrean manual. Pelajarannya: inovasi harus inklusif dan disertai alternatif bagi pengguna yang membutuhkan.",
+      opsi: {
+        A: "Teks tidak menyarankan menghindari sistem digital, melainkan melengkapinya.",
+        B: "Warga lanjut usia tetap berhak atas layanan; teks justru menunjukkan solusi untuk mereka.",
+        C: "Teks menunjukkan bahwa teknologi dapat menimbulkan kendala bagi sebagian pengguna.",
+        D: "Antrean manual bukan selalu lebih baik; ia disediakan sebagai pendamping.",
+        E: "Tepat. Inovasi digital perlu dukungan inklusif."
+      },
+      dasar: [
+        "Reading comprehension: main idea and inference.",
+        "Prinsip pelayanan publik yang inklusif."
+      ],
+      jebakan: "Pilihan yang terlalu absolut (“always”, “should be avoided”) biasanya salah. Cari jawaban yang seimbang dan sesuai dengan keseluruhan teks."
+    },
+    variasi: [
+      "Soal main idea teks tentang layanan publik.",
+      "Soal inference dari studi kasus digitalisasi.",
+      "Soal vocabulary dalam konteks pemerintahan."
     ]
   }
 ]);

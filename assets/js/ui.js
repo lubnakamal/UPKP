@@ -171,6 +171,21 @@
     window.scrollTo({ top: 0, behavior: "auto" });
   }
 
+  function reducedMotion() {
+    try {
+      if (window.Store && Store.settings && Store.settings().reduceMotion) return true;
+    } catch (e) { /* abaikan */ }
+    return !!(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+  }
+
+  function scrollToEl(el, opts) {
+    if (!el) return;
+    el.scrollIntoView({
+      behavior: reducedMotion() ? "auto" : "smooth",
+      block: (opts && opts.block) || "start"
+    });
+  }
+
   /* ---------- shared question feedback ---------- */
 
   function feedbackHTML(q, picked) {
@@ -243,6 +258,7 @@
     fmtClock: fmtClock, fmtDuration: fmtDuration, fmtDate: fmtDate,
     ring: ring, toast: toast, modal: modal, confirm: confirm, closeModal: closeModal,
     crumbs: crumbs, setNav: setNav, scrollTop: scrollTop,
+    reducedMotion: reducedMotion, scrollToEl: scrollToEl,
     feedbackHTML: feedbackHTML, optionList: optionList
   };
 })();

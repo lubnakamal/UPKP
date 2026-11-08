@@ -252,7 +252,7 @@
     var mCount = materis().length;
     var tCount = (window.SOAL_TRYOUT || []).length;
     var lCount = (window.SOAL_LATIHAN || []).length;
-    var integrity = mCount === 14 && tCount === 100 && lCount === 100;
+    var integrity = mCount === 13 && tCount === 100 && lCount === 100;
     document.getElementById("view").innerHTML =
       '<div class="section-head" style="margin-top:0"><div><span class="eyebrow">Preferensi</span><h1 class="h1" style="margin-top:8px">Pengaturan</h1></div></div>' +
       '<div class="split"><div class="card card-pad">' +
@@ -268,7 +268,7 @@
       '<div class="stack">' +
         '<div class="card card-pad"><span class="eyebrow">Pemeriksaan data</span>' +
           '<div style="margin-top:12px" class="stack">' +
-            '<div class="row-between"><span class="small">Modul materi</span><span class="badge ' + (mCount === 14 ? "badge-ok" : "badge-warn") + '">' + mCount + " / 14</span></div>" +
+            '<div class="row-between"><span class="small">Modul materi</span><span class="badge ' + (mCount === 13 ? "badge-ok" : "badge-warn") + '">' + mCount + " / 13</span></div>" +
             '<div class="row-between"><span class="small">Soal tryout</span><span class="badge ' + (tCount === 100 ? "badge-ok" : "badge-warn") + '">' + tCount + " / 100</span></div>" +
             '<div class="row-between"><span class="small">Soal latihan</span><span class="badge ' + (lCount === 100 ? "badge-ok" : "badge-warn") + '">' + lCount + " / 100</span></div>" +
             '<div class="row-between"><span class="small">Penyimpanan lokal</span><span class="badge ' + (Store.available ? "badge-ok" : "badge-bad") + '">' + (Store.available ? "Aktif" : "Tidak tersedia") + "</span></div>" +
@@ -360,6 +360,7 @@
   }
 
   function route() {
+    if (window.Quiz && Quiz.stopTimer) Quiz.stopTimer();
     var r = parseHash();
     applyTheme();
     document.body.classList.remove("nav-open");

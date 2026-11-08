@@ -56,7 +56,15 @@
 
     /* ---------- reading progress ---------- */
     progress: function () {
-      return read("progress", { read: [], last: null, lastAt: null });
+      var p = read("progress", { read: [], last: null, lastAt: null });
+      if (!p || !Array.isArray(p.read)) p = { read: [], last: null, lastAt: null };
+      // Buang referensi modul yang sudah tidak ada (mis. modul yang dihapus).
+      var M = window.UPKP_MATERI;
+      if (M && Object.keys(M).length) {
+        p.read = p.read.filter(function (id) { return !!M[id]; });
+        if (p.last && !M[p.last]) p.last = null;
+      }
+      return p;
     },
     isRead: function (id) {
       return Store.progress().read.indexOf(id) !== -1;
