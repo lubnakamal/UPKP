@@ -1482,7 +1482,7 @@ window.SOAL_TRYOUT = (window.SOAL_TRYOUT || []).concat([
       jebakan: "Bocoran menyebut “kenaikan pangkat ketika angka kredit terpenuhi”. Kuncinya: terpenuhi adalah syarat, bukan jaminan otomatis."
     },
     variasi: [
-      "Soal periode kenaikan pangkat 1 April dan 1 Oktober.",
+      "Soal periodisasi kenaikan pangkat: 12 kali setahun, setiap tanggal 1.",
       "Soal perbedaan angka kredit dan SKP.",
       "Soal syarat kenaikan pangkat reguler, pilihan, dan istimewa."
     ]

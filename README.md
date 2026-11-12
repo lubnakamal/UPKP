@@ -164,6 +164,8 @@ Materi telah disesuaikan dengan regulasi yang berlaku saat penyusunan (7 Novembe
 
 - **UU Nomor 20 Tahun 2023** tentang Aparatur Sipil Negara — istilah ASN mencakup PNS dan PPPK; manajemen berbasis sistem merit.
 - **PP Nomor 94 Tahun 2021** tentang Disiplin PNS — jenis dan tingkat hukuman disiplin.
+- **Peraturan BKN Nomor 2 Tahun 2025** tentang Kenaikan Pangkat Reguler PNS.
+- **Peraturan BKN Nomor 4 Tahun 2025** tentang Periodisasi Kenaikan Pangkat PNS — periode kenaikan pangkat 12 kali dalam setahun (tanggal 1 setiap bulan), mencabut Peraturan BKN 4/2023 yang hanya 6 periode.
 - **Perda Provinsi Jawa Tengah Nomor 5 Tahun 2025** tentang Pembentukan dan Susunan Perangkat Daerah — induk SOTK, mencabut Perda 9/2016 dan Perda 5/2022.
 - **Pergub Jawa Tengah Nomor 1–4 Tahun 2026**:
   - 1/2026 — SOTK Setda, Sekretariat DPRD, Inspektorat, dan Staf Ahli Gubernur.

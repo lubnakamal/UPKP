@@ -49,7 +49,8 @@ window.UPKP_MATERI.kepegawaian = {
       judul: "Pangkat, angka kredit, dan manajemen kinerja",
       html: `
 <h3>1. Pangkat dan kenaikan pangkat</h3>
-<p>Pangkat adalah kedudukan yang menunjukkan tingkat seseorang dalam jenjang kepangkatan. Kenaikan pangkat dapat bersifat <b>reguler</b>, <b>pilihan</b>, atau <b>istimewa</b>. Kenaikan pangkat reguler umumnya ditetapkan dua kali setahun, yaitu <b>1 April</b> dan <b>1 Oktober</b>.</p>
+<p>Pangkat adalah kedudukan yang menunjukkan tingkat seseorang dalam jenjang kepangkatan. Kenaikan pangkat dapat bersifat <b>reguler</b>, <b>pilihan</b>, atau <b>istimewa</b>. Sesuai <b>Peraturan BKN Nomor 4 Tahun 2025</b> tentang Periodisasi Kenaikan Pangkat PNS, periode kenaikan pangkat ditetapkan <b>12 kali dalam 1 tahun</b>, yaitu tanggal <b>1 setiap bulan</b>, mulai 1 Januari sampai 1 Desember. Dengan demikian, usul kenaikan pangkat dapat diajukan setiap bulan mengikuti periode tersebut.</p>
+<div class="callout kunci"><span class="c-label">Kunci</span><p>Periodisasi terbaru: <b>12 periode per tahun</b> — 1 Januari, 1 Februari, 1 Maret, 1 April, 1 Mei, 1 Juni, 1 Juli, 1 Agustus, 1 September, 1 Oktober, 1 November, dan 1 Desember. Ketentuan lama yang hanya menetapkan <b>dua periode per tahun</b> tidak berlaku lagi.</p></div>
 <div class="tbl-wrap"><table>
 <thead><tr><th>Jenis</th><th>Dasar</th><th>Contoh</th></tr></thead>
 <tbody>
@@ -121,6 +122,7 @@ window.UPKP_MATERI.kepegawaian = {
     "ASN = PNS + PPPK; manajemen ASN berbasis sistem merit.",
     "JPT Madya eselon I; JPT Pratama II; Administrator III; Pengawas IV; JF sesuai jenjang.",
     "Sekwan = JPT Pratama; Provinsi II.a, Kabupaten/Kota II.b.",
+    "Kenaikan pangkat PNS: 12 periode per tahun, setiap tanggal 1 (Januari–Desember), sesuai Peraturan BKN 4/2025.",
     "Angka kredit adalah syarat penting kenaikan pangkat JF, bukan satu-satunya syarat.",
     "PLH = tugas harian; PLT = menjalankan jabatan lowong/berhalangan; PJ = mengisi jabatan kepala daerah.",
     "PP 94/2021: disiplin ringan, sedang (potong tukin), berat (turun jabatan s.d. pemberhentian).",
@@ -129,8 +131,10 @@ window.UPKP_MATERI.kepegawaian = {
   dasarHukum: [
     "UU Nomor 20 Tahun 2023 tentang Aparatur Sipil Negara.",
     "Peraturan Pemerintah Nomor 94 Tahun 2021 tentang Disiplin Pegawai Negeri Sipil.",
-    "Peraturan Pemerintah Nomor 11 Tahun 2017 tentang Manajemen PNS sebagaimana telah diubah.",
-    "Peraturan BKN tentang kenaikan pangkat dan angka kredit jabatan fungsional."
+    "Peraturan Pemerintah Nomor 11 Tahun 2017 tentang Manajemen PNS sebagaimana telah diubah dengan Peraturan Pemerintah Nomor 17 Tahun 2020.",
+    "Peraturan BKN Nomor 2 Tahun 2025 tentang Kenaikan Pangkat Reguler Pegawai Negeri Sipil.",
+    "Peraturan BKN Nomor 4 Tahun 2025 tentang Periodisasi Kenaikan Pangkat Pegawai Negeri Sipil.",
+    "Peraturan BKN tentang angka kredit jabatan fungsional."
   ]
 };
 
