@@ -1,6 +1,6 @@
 # UPKP Tingkat 3 — Materi & CAT Tryout
 
-Aplikasi web statis untuk persiapan **Ujian Penyesuaian Kualifikasi Pendidikan (UPKP) Tingkat 3** (D3–S3). Berisi 13 modul materi yang diperluas dari kisi-kisi resmi, field report, dan bocoran, ditambah **100 soal CAT Tryout** serta **100 soal latihan per materi** dengan pembahasan mendalam.
+Aplikasi web statis untuk persiapan **Ujian Penyesuaian Kualifikasi Pendidikan (UPKP) Tingkat 3** (D3–S3). Berisi 13 modul materi yang diperluas dari kisi-kisi resmi, field report, dan bocoran, ditambah **100 soal CAT Tryout**, **100 soal latihan per materi**, dan **Tryout HOTS rahasia (24 soal C4–C6)** dengan pembahasan mendalam.
 
 Seluruh aplikasi berjalan **offline** — tanpa server, tanpa build, tanpa CDN, dan tanpa koneksi internet.
 
@@ -35,6 +35,15 @@ Seluruh aplikasi berjalan **offline** — tanpa server, tanpa build, tanpa CDN, 
 - **Autosave** setiap jawaban; sesi dapat dilanjutkan setelah halaman ditutup atau di-refresh.
 - Tanpa pengurangan nilai: 1 poin per jawaban benar.
 
+### Tryout HOTS (mode rahasia)
+- **24 soal penalaran tingkat tinggi** murni — 8 soal C4 (Menganalisis), 8 soal C5 (Mengevaluasi), 8 soal C6 (Mencipta), tersebar merata 2 soal per materi.
+- Bukan hanya soal yang HOTS: **pilihan jawaban, pengecoh, dan pembahasan** juga menuntut penalaran tingkat tinggi.
+- **Tanpa batas waktu** — kerjakan sesuai tempo sendiri.
+- **Umpan balik langsung**: setiap jawaban langsung menampilkan benar/salah beserta penjelasan singkat (inti, alasan kunci, analisis tiap opsi, dasar konsep/hukum, jebakan, dan variasi soal).
+- Jawaban terkunci setelah dipilih; jawaban tersimpan otomatis dan sesi dapat dilanjutkan.
+- Hasil menampilkan **capaian per level kognitif (C4/C5/C6)**.
+- **Terkunci secara bawaan.** Untuk membukanya, ketik kode rahasia **`karangmoncol`** di mana saja pada halaman aplikasi (bukan di dalam kolom isian). Status terbuka tersimpan otomatis di perangkat.
+
 ### Pembahasan
 - Skor akhir dan rincian per kelompok/materi.
 - **Mengapa kunci benar** dan **inti pembahasan** untuk setiap soal.
@@ -64,6 +73,29 @@ Sekali klik, aplikasi menyusun **satu berkas PDF** (`Materi-UPKP-Tingkat-3.pdf`)
 - Header berjalan (judul modul) dan footer bernomor halaman pada setiap halaman.
 
 PDF ditulis sepenuhnya di dalam aplikasi (`assets/js/pdf.js`) — **tanpa library, tanpa CDN, dan tanpa koneksi internet** — sehingga tetap bekerja pada protokol `file://`.
+
+---
+
+## Tryout HOTS Rahasia
+
+Selain tryout dan latihan biasa, aplikasi menyimpan satu mode tersembunyi: **Tryout HOTS (Higher Order Thinking Skills)** berisi **24 soal** yang menuntut level kognitif tinggi.
+
+- **Sebaran level:** 8 soal **C4 · Analisis**, 8 soal **C5 · Evaluasi**, 8 soal **C6 · Mencipta**.
+- **Cakupan:** 2 soal untuk masing-masing dari 12 materi teruji (TWK, TKT, TSI, TKP).
+- **Bukan hanya soal yang HOTS** — opsi jawaban, pengecoh, dan seluruh pembahasan juga dirancang pada level penalaran tinggi.
+- **Tanpa batas waktu** dan memberi **umpan balik langsung** benar/salah + penjelasan singkat setelah setiap soal dijawab.
+
+### Cara Membuka
+
+Ketik kode rahasia berikut di mana saja pada halaman aplikasi (pastikan fokus **tidak** berada di kolom pencarian/isian):
+
+```
+karangmoncol
+```
+
+Setelah kode dikenali, aplikasi otomatis membuka halaman **Tryout HOTS** dan menyimpan status terbuka di perangkat. Selama belum dibuka, rute `#/hots` menampilkan halaman terkunci.
+
+> Karena seluruh logika berjalan di sisi klien, kode ini berfungsi sebagai penyaring, bukan pengamanan kriptografis.
 
 ---
 
@@ -123,7 +155,8 @@ D:\www\UPKP\
         ├── tryout-a.js         # T001–T050
         ├── tryout-b.js         # T051–T100
         ├── latihan-a.js        # L001–L050 (selektif)
-        └── latihan-b.js        # L051–L119
+        ├── latihan-b.js        # L051–L119
+        └── hots.js             # H001–H024 — Tryout HOTS rahasia (C4–C6)
 ```
 
 ### Rute Aplikasi
@@ -135,6 +168,7 @@ D:\www\UPKP\
 | `#/materi/:id` | Detail modul + daftar isi |
 | `#/latihan` | Pemilihan latihan per materi |
 | `#/tryout` | Briefing CAT Tryout |
+| `#/hots` | Briefing Tryout HOTS (terkunci hingga kode `karangmoncol` dimasukkan) |
 | `#/sesi` | Sesi ujian aktif |
 | `#/hasil/:id` | Hasil + review pembahasan |
 | `#/riwayat` | Riwayat & analitik |
@@ -162,7 +196,7 @@ Semua data disimpan lokal di browser dengan namespace `upkp.v1.`:
 
 | Key | Isi |
 |---|---|
-| `upkp.v1.settings` | Tema (`light`/`dark`) dan preferensi animasi |
+| `upkp.v1.settings` | Tema (`light`/`dark`), preferensi animasi, dan status kunci Tryout HOTS (`hotsUnlocked`) |
 | `upkp.v1.progress` | Daftar materi yang sudah dibaca + materi terakhir |
 | `upkp.v1.session` | Sesi ujian aktif (jawaban, indeks soal, flag, sisa waktu) |
 | `upkp.v1.attempts` | Riwayat percobaan (maksimal 60) |
@@ -225,7 +259,7 @@ Edit file di `data/soal/`. Struktur soal:
 ```js
 {
   id: "T101",
-  mode: "tryout",             // tryout | latihan
+  mode: "tryout",             // tryout | latihan | hots
   kelompok: "TWK",            // TWK | TKT | TSI | TKP
   materi: "pancasila",        // harus cocok dengan id materi
   tipe: "HOTS",

@@ -97,7 +97,7 @@
   function resumeBanner() {
     var s = Store.getSession();
     if (!s || s.finished) return "";
-    var label = s.mode === "tryout" ? "Tryout Penuh" : "Latihan " + (s.materiNama || "");
+    var label = s.mode === "tryout" ? "Tryout Penuh" : s.mode === "hots" ? "Tryout HOTS" : "Latihan " + (s.materiNama || "");
     return '<div class="resume-banner">' + UI.icon("clock", 17) +
       "<span>Sesi <b>" + UI.esc(label) + "</b> masih berjalan — " +
       (s.mode === "tryout" ? "waktu terus berjalan." : "jawaban sudah tersimpan otomatis.") + "</span>" +
@@ -385,6 +385,7 @@
     }
     if (r.page === "latihan") return Quiz.renderLatihanIndex();
     if (r.page === "tryout") return Quiz.renderTryoutBriefing();
+    if (r.page === "hots") return Quiz.hotsUnlocked() ? Quiz.renderHotsBriefing() : Quiz.renderHotsLocked();
     if (r.page === "sesi") return Quiz.renderSession();
     if (r.page === "hasil") return Hasil.render(r.param);
     if (r.page === "riwayat") return Hasil.renderRiwayat();
@@ -425,7 +426,31 @@
       }
     });
     window.addEventListener("hashchange", function () { route(); UI.scrollTop(); });
+    bindSecret();
     route();
+  }
+
+  /* ---------- kode rahasia: buka Tryout HOTS ---------- */
+
+  var SECRET = "karangmoncol";
+  var secretBuf = "";
+
+  function bindSecret() {
+    document.addEventListener("keydown", function (e) {
+      if (e.ctrlKey || e.metaKey || e.altKey) return;
+      var t = e.target;
+      if (t && (t.tagName === "INPUT" || t.tagName === "TEXTAREA" || t.isContentEditable)) return;
+      if (e.key.length !== 1) return;
+      secretBuf = (secretBuf + e.key.toLowerCase()).slice(-SECRET.length);
+      if (secretBuf === SECRET) {
+        secretBuf = "";
+        var already = Quiz.hotsUnlocked && Quiz.hotsUnlocked();
+        Quiz.unlockHots();
+        UI.toast(already ? "Tryout HOTS terbuka" : "Kode diterima — Tryout HOTS terbuka");
+        if ((location.hash || "").replace(/^#/, "") !== "/hots") location.hash = "#/hots";
+        else route();
+      }
+    });
   }
 
   window.App = {

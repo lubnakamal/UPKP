@@ -10,13 +10,27 @@
   var QINDEX = null;
 
   function bank(mode) {
-    return mode === "tryout" ? (window.SOAL_TRYOUT || []) : (window.SOAL_LATIHAN || []);
+    if (mode === "tryout") return window.SOAL_TRYOUT || [];
+    if (mode === "hots") return window.SOAL_HOTS || [];
+    return window.SOAL_LATIHAN || [];
+  }
+
+  /* Mode yang memberi umpan balik langsung setelah menjawab (tanpa timer). */
+  function immediate(mode) { return mode === "latihan" || mode === "hots"; }
+
+  /* ---------- kunci mode rahasia (Tryout HOTS) ---------- */
+  function hotsUnlocked() {
+    try { return !!(window.Store && Store.settings().hotsUnlocked); } catch (e) { return false; }
+  }
+  function unlockHots() {
+    try { Store.saveSettings({ hotsUnlocked: true }); } catch (e) { /* abaikan */ }
   }
 
   function questionById(id) {
     if (!QINDEX) {
       QINDEX = {};
-      (window.SOAL_TRYOUT || []).concat(window.SOAL_LATIHAN || []).forEach(function (q) { QINDEX[q.id] = q; });
+      (window.SOAL_TRYOUT || []).concat(window.SOAL_LATIHAN || [], window.SOAL_HOTS || [])
+        .forEach(function (q) { QINDEX[q.id] = q; });
     }
     return QINDEX[id] || null;
   }
@@ -129,11 +143,93 @@
     document.getElementById("view").innerHTML =
       '<div class="section-head" style="margin-top:0"><div><span class="eyebrow">Latihan terarah</span><h1 class="h1" style="margin-top:8px">Latihan per Materi</h1>' +
       '<p class="lede" style="margin-top:8px">Pilih satu materi, jawab, lalu baca pembahasan yang menjelaskan alasan setiap opsi — plus variasi soal yang mungkin muncul.</p></div>' +
-      '<div class="row"><span class="chip">' + bankAll.length + " soal latihan</span></div></div>" + sections;
+      '<div class="row"><span class="chip">' + bankAll.length + " soal latihan</span>" +
+        (hotsUnlocked() ? '<a class="btn btn-sm" href="#/hots">' + UI.icon("spark", 15) + " Tryout HOTS</a>" : "") +
+      "</div></div>" + sections;
 
     document.querySelectorAll("[data-latihan]").forEach(function (b) {
       b.addEventListener("click", function () { begin("latihan", b.getAttribute("data-latihan")); });
     });
+  }
+
+  /* ---------- tryout HOTS (mode rahasia) ---------- */
+
+  var HOTS_LEVELS = [
+    { key: "C4 · Analisis", desc: "Menguraikan hubungan, membedakan, dan menemukan pola dari suatu kasus." },
+    { key: "C5 · Evaluasi", desc: "Menilai, mengkritik, dan memutuskan berdasarkan kriteria/konsep." },
+    { key: "C6 · Mencipta", desc: "Merancang, merumuskan, dan menyusun solusi atau produk baru." }
+  ];
+
+  function renderHotsLocked() {
+    UI.crumbs([{ label: "Beranda", href: "#/" }, { label: "Mode rahasia" }]);
+    UI.setNav("latihan");
+    document.getElementById("view").innerHTML =
+      '<div class="empty" style="margin-top:30px"><div class="e-icon">' + UI.icon("key", 26) + "</div>" +
+      "<h3>Mode rahasia terkunci</h3>" +
+      "<p>Halaman ini hanya terbuka setelah kode rahasia dimasukkan.</p>" +
+      '<p class="small">Ketik kode rahasia — satu kata, diawali <b>karang</b> — di mana saja pada halaman ini.</p>' +
+      '<a class="btn" href="#/">Kembali ke Beranda</a></div>';
+  }
+
+  function renderHotsBriefing() {
+    UI.crumbs([{ label: "Beranda", href: "#/" }, { label: "Tryout HOTS" }]);
+    UI.setNav("latihan");
+    var bankAll = bank("hots");
+    var counts = {}, perKelompok = {};
+    bankAll.forEach(function (q) {
+      counts[q.tipe] = (counts[q.tipe] || 0) + 1;
+      perKelompok[q.kelompok] = (perKelompok[q.kelompok] || 0) + 1;
+    });
+    var s = Store.getSession();
+    var resume = s && !s.finished && s.mode === "hots";
+    var attempts = Store.attempts().filter(function (a) { return a.mode === "hots"; });
+    var best = 0;
+    attempts.forEach(function (a) { best = Math.max(best, a.score.benar); });
+
+    document.getElementById("view").innerHTML =
+      (resume ? '<div class="resume-banner">' + UI.icon("clock", 17) + "<span>Tryout HOTS belum selesai. Jawaban tersimpan otomatis.</span><span class=\"spacer\"></span><a class=\"btn btn-sm btn-primary\" href=\"#/sesi\">Lanjutkan</a></div>" : "") +
+      '<div class="section-head" style="margin-top:0"><div><span class="eyebrow">Mode rahasia terbuka</span><h1 class="h1" style="margin-top:8px">Tryout HOTS — C4 · C5 · C6</h1>' +
+      '<p class="lede" style="margin-top:8px">' + bankAll.length + " soal penalaran tingkat tinggi lintas TWK, TKT, TSI, dan TKP. Tanpa batas waktu — setiap jawaban langsung diberi hasil benar/salah beserta penjelasan singkat.</p></div>" +
+      '<div class="row"><span class="chip">' + UI.icon("spark", 14) + "Higher Order Thinking Skills</span></div></div>" +
+      '<div class="split">' +
+        '<div class="card card-pad">' +
+          '<div class="grid grid-3" style="gap:10px;margin-bottom:18px">' +
+            '<div class="stat" style="border:0;padding:0"><span class="k">Jumlah soal</span><span class="v">' + bankAll.length + "</span></div>" +
+            '<div class="stat" style="border:0;padding:0"><span class="k">Level</span><span class="v">C4–C6</span></div>' +
+            '<div class="stat" style="border:0;padding:0"><span class="k">Waktu</span><span class="v">Bebas</span></div>' +
+          "</div>" +
+          '<h2 class="h3" style="margin-bottom:10px">Cara kerja</h2>' +
+          '<ul class="small" style="line-height:1.8">' +
+            "<li><b>Tanpa batas waktu</b> — kerjakan sesuai tempo Anda.</li>" +
+            "<li>Setelah memilih jawaban, hasil <b>benar/salah</b> dan penjelasan singkat <b>langsung tampil</b>.</li>" +
+            "<li>Jawaban terkunci setelah dipilih; lanjutkan dengan tombol <b>Berikutnya</b>.</li>" +
+            "<li>Setiap soal menuntut <b>analisis, evaluasi, atau perancangan</b> — bukan hafalan.</li>" +
+            "<li>Jawaban tersimpan otomatis; sesi dapat dilanjutkan.</li>" +
+          "</ul>" +
+          '<div class="result-actions">' +
+            '<button class="btn btn-primary btn-lg" id="startHots">' + UI.icon("play", 17) + (resume ? "Mulai ulang tryout HOTS" : "Mulai Tryout HOTS") + "</button>" +
+            (attempts.length ? '<a class="btn btn-lg" href="#/riwayat">' + UI.icon("chart", 17) + " Riwayat</a>" : "") +
+          "</div>" +
+          (attempts.length ? '<p class="tiny" style="margin-top:10px">Terbaik: <b>' + best + " / " + bankAll.length + "</b> · " + attempts.length + " percobaan</p>" : "") +
+        "</div>" +
+        '<div class="stack">' +
+          '<div class="card card-pad"><span class="eyebrow">Tiga level kognitif</span><div class="stack" style="margin-top:12px">' +
+            HOTS_LEVELS.map(function (lv) {
+              return '<div class="row-between" style="align-items:flex-start;gap:10px"><div><b style="font-size:13px">' + lv.key + "</b>" +
+                '<p class="tiny" style="margin:3px 0 0">' + lv.desc + "</p></div>" +
+                '<span class="badge badge-tsi">' + (counts[lv.key] || 0) + " soal</span></div>";
+            }).join("") +
+          "</div></div>" +
+          '<div class="card card-pad"><span class="eyebrow">Cakupan kelompok</span><div class="pill-list" style="margin-top:12px">' +
+            ["TWK", "TKT", "TSI", "TKP"].map(function (k) {
+              return '<span class="pill">' + k + " · " + (perKelompok[k] || 0) + " soal</span>";
+            }).join("") +
+          "</div></div>" +
+        "</div>" +
+      "</div>";
+
+    var start = document.getElementById("startHots");
+    if (start) start.addEventListener("click", function () { begin("hots", null); });
   }
 
   /* ---------- session lifecycle ---------- */
@@ -143,7 +239,9 @@
     if (active && !active.finished) {
       var label = active.mode === "tryout"
         ? "Tryout"
-        : 'Latihan "' + (active.materiNama || "") + '"';
+        : active.mode === "hots"
+          ? "Tryout HOTS"
+          : 'Latihan "' + (active.materiNama || "") + '"';
       UI.confirm({
         title: "Ganti sesi yang sedang berjalan?",
         body: label + " yang sedang berjalan akan dibuang dan tidak dinilai.",
@@ -158,14 +256,14 @@
   }
 
   function startSession(mode, materiId) {
-    var qs = bank(mode).filter(function (q) { return mode === "tryout" || q.materi === materiId; });
+    var qs = bank(mode).filter(function (q) { return mode === "tryout" || mode === "hots" || q.materi === materiId; });
     if (!qs.length) { UI.toast("Belum ada soal untuk materi ini", "bad"); return; }
     var now = Date.now();
     var session = {
       id: uid(),
       mode: mode,
       materi: materiId,
-      materiNama: materiId ? materiName(materiId) : "Tryout Penuh",
+      materiNama: mode === "hots" ? "Tryout HOTS (C4–C5–C6)" : (materiId ? materiName(materiId) : "Tryout Penuh"),
       qids: qs.map(function (q) { return q.id; }),
       answers: {},
       flags: {},
@@ -275,7 +373,7 @@
 
   function renderSession() {
     var s = Store.getSession();
-    UI.setNav(s && s.mode === "latihan" ? "latihan" : "tryout");
+    UI.setNav(s && immediate(s.mode) ? "latihan" : "tryout");
     if (!s || s.finished) {
       document.getElementById("view").innerHTML =
         '<div class="empty" style="margin-top:30px"><div class="e-icon">' + UI.icon("clock", 26) + "</div>" +
@@ -291,14 +389,14 @@
     }
     if (s.index >= s.qids.length) s.index = s.qids.length - 1;
 
-    UI.crumbs([{ label: "Beranda", href: "#/" }, { label: s.mode === "tryout" ? "Tryout" : "Latihan" }, { label: s.materiNama }]);
+    UI.crumbs([{ label: "Beranda", href: "#/" }, { label: s.mode === "tryout" ? "Tryout" : s.mode === "hots" ? "Tryout HOTS" : "Latihan" }, { label: s.materiNama }]);
 
     var q = questionById(s.qids[s.index]);
     var answeredCount = Object.keys(s.answers).length;
 
     document.getElementById("view").innerHTML =
       '<div class="quiz-top">' +
-        '<div class="qt-left"><span class="badge ' + (s.mode === "tryout" ? "badge-twk" : "badge-tkt") + '">' + (s.mode === "tryout" ? "TRYOUT" : "LATIHAN") + "</span>" +
+        '<div class="qt-left"><span class="badge ' + (s.mode === "tryout" ? "badge-twk" : s.mode === "hots" ? "badge-tsi" : "badge-tkt") + '">' + (s.mode === "tryout" ? "TRYOUT" : s.mode === "hots" ? "HOTS" : "LATIHAN") + "</span>" +
           '<div><div class="qt-title">' + UI.esc(s.materiNama) + '</div><div class="qt-sub">Soal ' + (s.index + 1) + " dari " + s.qids.length + " · " + answeredCount + " terjawab</div></div></div>" +
         '<div class="row" style="gap:8px">' +
           (s.mode === "tryout" ? '<div class="timer" id="timer" role="timer" aria-label="Sisa waktu">' + UI.icon("clock", 15) + '<span data-time>--:--</span></div>' : '<span class="chip">' + UI.icon("bulb", 14) + "Pembahasan langsung</span>") +
@@ -331,7 +429,7 @@
     if (!q || !host) return;
 
     var picked = s.answers[q.id] || null;
-    var isLatihan = s.mode === "latihan";
+    var isLatihan = immediate(s.mode);
     var locked = isLatihan && !!picked;
     var last = s.index === s.qids.length - 1;
 
@@ -457,7 +555,7 @@
       if (/^[1-5]$/.test(key)) {
         var letter = UI.letters[Number(key) - 1];
         if (q.opsi[letter]) {
-          var isLatihan = s.mode === "latihan";
+          var isLatihan = immediate(s.mode);
           if (isLatihan && s.answers[q.id]) return;
           s.answers[q.id] = letter;
           Store.saveSession(s);
@@ -483,6 +581,10 @@
   window.Quiz = {
     renderTryoutBriefing: renderTryoutBriefing,
     renderLatihanIndex: renderLatihanIndex,
+    renderHotsBriefing: renderHotsBriefing,
+    renderHotsLocked: renderHotsLocked,
+    hotsUnlocked: hotsUnlocked,
+    unlockHots: unlockHots,
     renderSession: renderSession,
     begin: begin,
     questionById: questionById,
