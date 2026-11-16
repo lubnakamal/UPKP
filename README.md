@@ -1,6 +1,6 @@
 # UPKP Tingkat 3 — Materi & CAT Tryout
 
-Aplikasi web statis untuk persiapan **Ujian Penyesuaian Kualifikasi Pendidikan (UPKP) Tingkat 3** (D3–S3). Berisi 13 modul materi yang diperluas dari kisi-kisi resmi, field report, dan bocoran, ditambah **100 soal CAT Tryout**, **100 soal latihan per materi**, dan **Tryout HOTS rahasia (24 soal C4–C6)** dengan pembahasan mendalam.
+Aplikasi web statis untuk persiapan **Ujian Penyesuaian Kualifikasi Pendidikan (UPKP) Tingkat 3** (D3–S3). Berisi 13 modul materi yang diperluas dari kisi-kisi resmi, field report, dan bocoran, ditambah **100 soal CAT Tryout**, **100 soal latihan per materi**, dan **Tryout HOTS rahasia (100 soal C4–C6 sesuai blueprint)** dengan pembahasan mendalam.
 
 Seluruh aplikasi berjalan **offline** — tanpa server, tanpa build, tanpa CDN, dan tanpa koneksi internet.
 
@@ -36,7 +36,7 @@ Seluruh aplikasi berjalan **offline** — tanpa server, tanpa build, tanpa CDN, 
 - Tanpa pengurangan nilai: 1 poin per jawaban benar.
 
 ### Tryout HOTS (mode rahasia)
-- **24 soal penalaran tingkat tinggi** murni — 8 soal C4 (Menganalisis), 8 soal C5 (Mengevaluasi), 8 soal C6 (Mencipta), tersebar merata 2 soal per materi.
+- **100 soal penalaran tingkat tinggi** murni dengan komposisi **sesuai blueprint resmi** (TWK 30, TKT 25, TSI 30, TKP 15): 34 soal C4 (Menganalisis), 34 soal C5 (Mengevaluasi), dan 32 soal C6 (Mencipta).
 - Bukan hanya soal yang HOTS: **pilihan jawaban, pengecoh, dan pembahasan** juga menuntut penalaran tingkat tinggi.
 - **Tanpa batas waktu** — kerjakan sesuai tempo sendiri.
 - **Umpan balik langsung**: setiap jawaban langsung menampilkan benar/salah beserta penjelasan singkat (inti, alasan kunci, analisis tiap opsi, dasar konsep/hukum, jebakan, dan variasi soal).
@@ -78,10 +78,19 @@ PDF ditulis sepenuhnya di dalam aplikasi (`assets/js/pdf.js`) — **tanpa librar
 
 ## Tryout HOTS Rahasia
 
-Selain tryout dan latihan biasa, aplikasi menyimpan satu mode tersembunyi: **Tryout HOTS (Higher Order Thinking Skills)** berisi **24 soal** yang menuntut level kognitif tinggi.
+Selain tryout dan latihan biasa, aplikasi menyimpan satu mode tersembunyi: **Tryout HOTS (Higher Order Thinking Skills)** berisi **100 soal** yang menuntut level kognitif tinggi, dengan komposisi **persis mengikuti blueprint resmi**.
 
-- **Sebaran level:** 8 soal **C4 · Analisis**, 8 soal **C5 · Evaluasi**, 8 soal **C6 · Mencipta**.
-- **Cakupan:** 2 soal untuk masing-masing dari 12 materi teruji (TWK, TKT, TSI, TKP).
+- **Sebaran level:** 34 soal **C4 · Analisis**, 34 soal **C5 · Evaluasi**, dan 32 soal **C6 · Mencipta**.
+- **Komposisi materi (sesuai blueprint):**
+
+| Kelompok | Jumlah | Materi (HOTS) |
+|---|---:|---|
+| TWK | 30 | Pancasila 10, UUD 1945 10, Sejarah Indonesia 5, Bahasa Indonesia 5 |
+| TKT | 25 | Peraturan Kepegawaian 10, Pelayanan Publik 5, Good Governance 5, Kebijakan Publik 5 |
+| TSI | 30 | Renstra & Perencanaan 15, SOTK 15 |
+| TKP | 15 | Bahasa Inggris 10, Literasi Digital 5 |
+| **Total** | **100** | |
+- **Cakupan:** seluruh 12 materi teruji (TWK, TKT, TSI, TKP) dengan jumlah butir per materi mengikuti blueprint di atas.
 - **Bukan hanya soal yang HOTS** — opsi jawaban, pengecoh, dan seluruh pembahasan juga dirancang pada level penalaran tinggi.
 - **Tanpa batas waktu** dan memberi **umpan balik langsung** benar/salah + penjelasan singkat setelah setiap soal dijawab.
 
@@ -156,7 +165,7 @@ D:\www\UPKP\
         ├── tryout-b.js         # T051–T100
         ├── latihan-a.js        # L001–L050 (selektif)
         ├── latihan-b.js        # L051–L119
-        └── hots.js             # H001–H024 — Tryout HOTS rahasia (C4–C6)
+        └── hots.js             # H001–H100 — Tryout HOTS rahasia (C4–C6, 100 soal)
 ```
 
 ### Rute Aplikasi

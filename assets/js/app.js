@@ -133,7 +133,7 @@
             '<span class="chip">' + UI.icon("file", 14) + "100 soal · blueprint resmi</span>" +
             '<span class="chip">' + UI.icon("clock", 14) + "90 menit</span>" +
             '<span class="chip">' + UI.icon("book", 14) + m.length + " modul materi</span>" +
-            '<span class="chip">' + UI.icon("layers", 14) + "200 bank soal</span>" +
+            '<span class="chip">' + UI.icon("layers", 14) + "300 bank soal</span>" +
           "</div>" +
           '<div class="result-actions">' +
             '<a class="btn btn-primary btn-lg" href="#/tryout">' + UI.icon("play", 17) + "Mulai Tryout</a>" +
@@ -252,7 +252,8 @@
     var mCount = materis().length;
     var tCount = (window.SOAL_TRYOUT || []).length;
     var lCount = (window.SOAL_LATIHAN || []).length;
-    var integrity = mCount === 13 && tCount === 100 && lCount === 100;
+    var hCount = (window.SOAL_HOTS || []).length;
+    var integrity = mCount === 13 && tCount === 100 && lCount === 100 && hCount === 100;
     document.getElementById("view").innerHTML =
       '<div class="section-head" style="margin-top:0"><div><span class="eyebrow">Preferensi</span><h1 class="h1" style="margin-top:8px">Pengaturan</h1></div></div>' +
       '<div class="split"><div class="card card-pad">' +
@@ -273,6 +274,7 @@
             '<div class="row-between"><span class="small">Modul materi</span><span class="badge ' + (mCount === 13 ? "badge-ok" : "badge-warn") + '">' + mCount + " / 13</span></div>" +
             '<div class="row-between"><span class="small">Soal tryout</span><span class="badge ' + (tCount === 100 ? "badge-ok" : "badge-warn") + '">' + tCount + " / 100</span></div>" +
             '<div class="row-between"><span class="small">Soal latihan</span><span class="badge ' + (lCount === 100 ? "badge-ok" : "badge-warn") + '">' + lCount + " / 100</span></div>" +
+            '<div class="row-between"><span class="small">Soal HOTS (rahasia)</span><span class="badge ' + (hCount === 100 ? "badge-ok" : "badge-warn") + '">' + hCount + " / 100</span></div>" +
             '<div class="row-between"><span class="small">Penyimpanan lokal</span><span class="badge ' + (Store.available ? "badge-ok" : "badge-bad") + '">' + (Store.available ? "Aktif" : "Tidak tersedia") + "</span></div>" +
           "</div>" +
         "</div>" +
