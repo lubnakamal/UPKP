@@ -66,7 +66,8 @@
       '<div class="section-head" style="margin-top:0"><div><span class="eyebrow">Perpustakaan</span>' +
       '<h1 class="h1" style="margin-top:8px">Materi Pembelajaran</h1>' +
       '<p class="lede" style="margin-top:8px">' + all.length + " modul yang diperluas dari kisi-kisi, field report, dan bocoran — bukan sekadar daftar poin.</p></div>" +
-      '<div class="row"><span class="chip">' + Store.readCount() + " / " + all.length + " selesai</span></div></div>" +
+      '<div class="row"><span class="chip">' + Store.readCount() + " / " + all.length + " selesai</span>" +
+        '<button class="btn btn-sm" id="pdfMateriBtn">' + UI.icon("download", 15) + " Unduh PDF</button></div></div>" +
       '<div class="filterbar">' +
         '<div class="search">' + UI.icon("search", 16) +
           '<input id="materiSearch" type="search" placeholder="Cari materi, istilah, atau regulasi…" value="' + UI.esc(query) + '" aria-label="Cari materi">' +
@@ -96,6 +97,14 @@
     });
     var clear = document.getElementById("clearFilter");
     if (clear) clear.addEventListener("click", function () { filter = "SEMUA"; query = ""; renderIndex(); });
+    bindPdfButton();
+  }
+
+  function bindPdfButton() {
+    var btn = document.getElementById("pdfMateriBtn");
+    if (btn) btn.addEventListener("click", function () {
+      if (window.PDFExport) PDFExport.downloadMateri(btn);
+    });
   }
 
   function renderDetail(id) {
@@ -133,7 +142,9 @@
       '<div class="materi-head">' +
         '<div class="row"><span class="badge ' + badgeClass(m.kelompok) + '">' + (m.kelompok === "PENGAYAAN" ? "PENGAYAAN · FR" : m.kelompok) + "</span>" +
         '<span class="tiny">Modul ' + String(m.urutan).padStart(2, "0") + " dari " + all.length + "</span>" +
-        (isRead ? '<span class="badge badge-ok">Sudah dibaca</span>' : "") + "</div>" +
+        (isRead ? '<span class="badge badge-ok">Sudah dibaca</span>' : "") +
+        '<span class="spacer"></span>' +
+        '<button class="btn btn-sm btn-ghost" id="pdfMateriBtn">' + UI.icon("download", 15) + " Unduh PDF</button>" + "</div>" +
         '<h1 class="h1">' + UI.esc(m.judul) + "</h1>" +
         '<p class="lede" style="margin:0 0 14px">' + UI.esc(m.ringkas) + "</p>" +
         '<div class="materi-meta">' +
@@ -194,6 +205,7 @@
     });
 
     setupScrollSpy();
+    bindPdfButton();
   }
 
   function setupScrollSpy() {

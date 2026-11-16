@@ -262,6 +262,8 @@
           '<label class="switch"><input type="checkbox" id="setMotion"' + (s.reduceMotion ? " checked" : "") + '><span></span></label></div>' +
         '<div class="setting-row"><div><h4>Ekspor data belajar</h4><p>Unduh progres dan riwayat dalam format JSON.</p></div>' +
           '<button class="btn btn-sm" id="exportBtn">' + UI.icon("download", 15) + "Ekspor</button></div>" +
+        '<div class="setting-row"><div><h4>Unduh materi pembelajaran</h4><p>Seluruh 13 modul materi dalam satu berkas PDF.</p></div>' +
+          '<button class="btn btn-sm" id="pdfMateriBtn">' + UI.icon("file", 15) + "Unduh PDF</button></div>" +
         '<div class="setting-row"><div><h4>Hapus semua data</h4><p>Progres, riwayat, dan sesi aktif akan hilang permanen.</p></div>' +
           '<button class="btn btn-sm btn-danger" id="resetBtn">' + UI.icon("trash", 15) + "Reset</button></div>" +
       "</div>" +
@@ -297,6 +299,10 @@
       document.body.appendChild(a); a.click(); a.remove();
       setTimeout(function () { URL.revokeObjectURL(a.href); }, 1000);
       UI.toast("Data belajar diekspor");
+    });
+    var pdfBtn = document.getElementById("pdfMateriBtn");
+    if (pdfBtn) pdfBtn.addEventListener("click", function () {
+      if (window.PDFExport) PDFExport.downloadMateri(pdfBtn);
     });
     var reset = document.getElementById("resetBtn");
     if (reset) reset.addEventListener("click", function () {

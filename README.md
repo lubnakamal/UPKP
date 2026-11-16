@@ -24,6 +24,7 @@ Seluruh aplikasi berjalan **offline** — tanpa server, tanpa build, tanpa CDN, 
 - Pencarian materi dan filter berdasarkan kelompok ujian.
 - Penanda **sudah dibaca** yang tersimpan otomatis per perangkat.
 - Navigasi daftar isi (TOC) per bagian pada setiap modul.
+- **Unduh materi (PDF)** — seluruh 13 modul digabung menjadi **satu berkas PDF** sekali klik, lengkap dengan sampul dan daftar modul bernomor halaman.
 
 ### Latihan & Tryout
 - **Latihan per materi** untuk 12 materi teruji (di luar modul pengayaan).
@@ -47,7 +48,22 @@ Seluruh aplikasi berjalan **offline** — tanpa server, tanpa build, tanpa CDN, 
 - **Mode gelap** yang tersimpan otomatis.
 - Pengurangan animasi (aksesibilitas).
 - **Ekspor JSON** berisi pengaturan, progres baca, dan riwayat percobaan.
+- **Unduh PDF materi** langsung dari halaman Pengaturan.
 - Reset seluruh data lokal.
+
+---
+
+## Unduh Materi (PDF)
+
+Tombol **Unduh PDF** tersedia di tiga tempat: header indeks materi, halaman detail modul, dan **Pengaturan → Unduh materi pembelajaran**.
+
+Sekali klik, aplikasi menyusun **satu berkas PDF** (`Materi-UPKP-Tingkat-3.pdf`) berisi:
+
+- **Sampul** dan **Daftar Modul** dengan nomor halaman asli.
+- **Satu bagian per modul** (13 modul) dengan judul, ringkasan, tujuan belajar, tabel, callout kunci/jebakan/contoh, ringkasan, dan dasar hukum.
+- Header berjalan (judul modul) dan footer bernomor halaman pada setiap halaman.
+
+PDF ditulis sepenuhnya di dalam aplikasi (`assets/js/pdf.js`) — **tanpa library, tanpa CDN, dan tanpa koneksi internet** — sehingga tetap bekerja pada protokol `file://`.
 
 ---
 
@@ -92,6 +108,7 @@ D:\www\UPKP\
 │       ├── store.js            # Persistensi localStorage (settings, progress, session, attempts)
 │       ├── ui.js               # Helper UI: ikon, escape HTML, feedback soal, toast, modal
 │       ├── materi.js           # Indeks materi, filter/pencarian, halaman detail + TOC
+│       ├── pdf.js              # Penulis PDF mandiri: gabung 13 modul jadi satu berkas PDF
 │       ├── quiz.js             # Siklus sesi CAT, timer, autosave, navigasi, submit
 │       ├── hasil.js            # Skor, review/pembahasan, riwayat & analitik
 │       └── app.js              # Router hash, dashboard, halaman tryout, pengaturan, nav mobile
