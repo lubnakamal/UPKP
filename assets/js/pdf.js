@@ -1,7 +1,8 @@
 /* ============================================================
-   PDF Export — menyusun seluruh materi pembelajaran menjadi satu
-   berkas PDF. Ditulis mandiri (tanpa library/CDN) agar tetap
-   berjalan offline pada protokol file://.
+   PDF Export — menyusun materi pembelajaran menjadi satu berkas
+   PDF, serta berkas "soal + kunci jawaban" untuk Latihan per
+   Materi dan CAT Tryout. Ditulis mandiri (tanpa library/CDN)
+   agar tetap berjalan offline pada protokol file://.
    ============================================================ */
 (function () {
   "use strict";
@@ -154,7 +155,7 @@
     }
     if (R.footer) {
       d.line(M, H - 44, W - M, H - 44, 0.6, C.border);
-      d.textAt(M, H - 32, "UPKP Tingkat 3 · Materi Pembelajaran", "r", 7.6, C.muted2);
+      d.textAt(M, H - 32, R.footerLabel || "UPKP Tingkat 3 \u00b7 Materi Pembelajaran", "r", 7.6, C.muted2);
       var lab = "Halaman " + (R.page + R.displayOffset);
       d.textAt(W - M - textWidth(lab, "r", 7.6), H - 32, lab, "r", 7.6, C.muted2);
     }
@@ -644,6 +645,180 @@
     });
   }
 
+  /* ---------- perender soal + kunci jawaban ---------- */
+
+  /* Baris dengan indentasi menggantung: label di kiri, teks melipat sejajar. */
+  function renderItem(runs, label, o) {
+    o = o || {};
+    var size = o.size || 10.4;
+    var lh = size * (o.lh || 1.55);
+    var indent = o.indent || 0;
+    var labelW = o.labelW || 0;
+    var lines = wrapRuns(runs, CW - indent - labelW, size);
+    if (!lines.length) lines = [[]];
+    for (var i = 0; i < lines.length; i++) {
+      var segs, x;
+      if (i === 0) {
+        segs = [{ text: label, style: "b" }].concat(lines[i]);
+        x = M + indent;
+      } else {
+        segs = lines[i];
+        x = M + indent + labelW;
+      }
+      putSegs(segs, x, size, o.color || C.ink, lh, { band: o.band, bar: o.bar });
+    }
+    if (o.spaceAfter) R.y += o.spaceAfter;
+  }
+
+  /* Satu butir soal: stimulus, pertanyaan bernomor, lalu opsi A–E. */
+  function renderSoal(q, num) {
+    need(46);
+    if (q.stimulus) {
+      renderPara([{ text: q.stimulus, style: "i" }], {
+        size: 9.8, color: C.inkSoft, lh: 1.5, indent: 0, spaceAfter: 4,
+        band: C.surface2, bar: { w: 3, color: C.muted2 }
+      });
+    }
+    var qSize = 10.4;
+    renderItem([{ text: q.pertanyaan || "", style: "r" }], num + ". ", {
+      size: qSize, color: C.ink, lh: 1.5, indent: 0,
+      labelW: textWidth(num + ". ", "b", qSize), spaceAfter: 3
+    });
+    var oSize = 10;
+    ["A", "B", "C", "D", "E"].forEach(function (k) {
+      var t = q.opsi ? q.opsi[k] : null;
+      if (t == null) return;
+      renderItem([{ text: t, style: "r" }], k + ". ", {
+        size: oSize, color: C.inkSoft, lh: 1.45, indent: 16,
+        labelW: textWidth(k + ". ", "b", oSize), spaceAfter: 1
+      });
+    });
+    R.y += 8;
+  }
+
+  /* Tabel kunci jawaban: beberapa pasang (No | Kunci) per baris. */
+  function renderKunciTable(keys) {
+    var perRow = 4;
+    function cell(t, style) { return { segs: [{ text: t, style: style || "r" }] }; }
+    var headerCells = [];
+    for (var h = 0; h < perRow; h++) { headerCells.push(cell("No")); headerCells.push(cell("Kunci")); }
+    var rows = [{ header: true, cells: headerCells }];
+    for (var i = 0; i < keys.length; i += perRow) {
+      var cells = [];
+      for (var j = 0; j < perRow; j++) {
+        var idx = i + j;
+        if (idx < keys.length) {
+          cells.push(cell(String(idx + 1), "b"));
+          cells.push(cell(keys[idx], "b"));
+        } else {
+          cells.push(cell(""));
+          cells.push(cell(""));
+        }
+      }
+      rows.push({ header: false, cells: cells });
+    }
+    renderTable(rows, {});
+  }
+
+  function renderSoalCover(cfg) {
+    R.doc.newPage();
+    R.page = 1;
+    R.y = MT;
+    R.noBreak = true;
+    R.doc.rect(0, 0, W, 10, C.brassBright);
+    R.doc.rect(0, 10, W, 6, C.navy);
+    R.y = 168;
+    putLine(cfg.eyebrow, M, 10, "b", C.brass, 16);
+    R.y += 8;
+    cfg.title.forEach(function (line) {
+      putSegs([{ text: line, style: "sb" }], M, 38, C.ink, 44);
+    });
+    R.y += 10;
+    putLine("UPKP Tingkat 3 \u2014 D3 s.d. S3", M, 14, "r", C.muted, 20);
+    R.y += 8;
+    R.doc.line(M, R.y, M + 96, R.y, 2, C.brass);
+    R.y += 24;
+    renderPara([{ text: cfg.desc, style: "r" }], { size: 11, color: C.inkSoft, lh: 1.6, spaceAfter: 20 });
+    var groups = (window.App && App.BLUEPRINT) || [];
+    groups.forEach(function (g) {
+      putLine(g.key, M, 10.5, "b", C.brass, 15);
+      R.doc.textAt(M + 46, R.y - 15 + 12, g.nama, "b", 11, C.ink);
+      R.doc.textAt(M + 46, R.y - 15 + 26, g.items.map(function (it) { return it.nama; }).join(", "), "r", 9.2, C.muted);
+      R.y += 34;
+    });
+    R.y += 2;
+    putLine("Berisi " + cfg.count + " soal beserta kunci jawaban \u2014 tanpa pembahasan.", M, 10, "b", C.teal, 15);
+    R.y = H - 150;
+    R.doc.line(M, R.y - 12, W - M, R.y - 12, 0.6, C.border);
+    putLine("Disusun oleh Mohammad Lubna Kamal, A.Md.Kom. \u00b7 RSUD dr. M. Ashari Pemalang", M, 9, "r", C.muted, 14);
+    putLine("Bukan aplikasi resmi BKN. Materi untuk belajar mandiri.", M, 9, "r", C.muted2, 14);
+    putLine("Diunduh " + tanggalIndonesia(), M, 9, "r", C.muted2, 14);
+  }
+
+  /* Menyusun berkas "soal + kunci": sampul, soal berkelompok, kunci di akhir. */
+  function buildSoal(kind) {
+    var isTryout = kind === "tryout";
+    var bank = isTryout ? (window.SOAL_TRYOUT || []) : (window.SOAL_LATIHAN || []);
+    var groups = (window.App && App.BLUEPRINT) ? App.BLUEPRINT : [];
+    var byMateri = {};
+    bank.forEach(function (q) { (byMateri[q.materi] = byMateri[q.materi] || []).push(q); });
+
+    var label = isTryout ? "UPKP Tingkat 3 \u00b7 CAT Tryout" : "UPKP Tingkat 3 \u00b7 Latihan per Materi";
+
+    var bodyDoc = new Doc();
+    R = { doc: bodyDoc, y: MT, page: 0, displayOffset: 1, header: true, footer: true, running: "", noBreak: false, footerLabel: label };
+
+    var num = 0;
+    var keys = [];
+    var first = true;
+    groups.forEach(function (g) {
+      var entries = g.items.map(function (it) { return { item: it, qs: byMateri[it.id] || [] }; });
+      var count = entries.reduce(function (a, e) { return a + e.qs.length; }, 0);
+      if (!count) return;
+      R.running = g.key + " \u00b7 " + g.nama;
+      beginPage();
+      if (first) {
+        renderPara([{
+          text: isTryout
+            ? "Kerjakan soal berikut sebagai simulasi tryout. Kunci jawaban seluruh soal tersedia pada bagian \u201cKunci Jawaban\u201d di akhir dokumen."
+            : "Kerjakan latihan berikut sesuai materinya. Kunci jawaban seluruh soal tersedia pada bagian \u201cKunci Jawaban\u201d di akhir dokumen.",
+          style: "r"
+        }], { size: 9.6, color: C.inkSoft, lh: 1.5, spaceAfter: 6, band: C.surface2, bar: { w: 3, color: C.brassBright } });
+        first = false;
+      }
+      renderHeading(g.key + " \u2014 " + g.nama, 2, {});
+      entries.forEach(function (e) {
+        if (!e.qs.length) return;
+        renderHeading(e.item.nama, 3, {});
+        e.qs.forEach(function (q) { num++; keys.push(q.kunci); renderSoal(q, num); });
+      });
+    });
+
+    var finalDoc = new Doc();
+    R = { doc: finalDoc, y: MT, page: 0, displayOffset: 0, header: false, footer: true, running: "", noBreak: true, footerLabel: label };
+    renderSoalCover({
+      eyebrow: isTryout ? "SIMULASI RESMI" : "LATIHAN TERARAH",
+      title: isTryout ? ["CAT Tryout", "100 Soal"] : ["Latihan Soal", "per Materi"],
+      desc: isTryout
+        ? "Kumpulan soal CAT Tryout UPKP Tingkat 3 dengan komposisi resmi TWK, TKT, TSI, dan TKP. Disusun untuk latihan mandiri."
+        : "Kumpulan seluruh latihan per materi UPKP Tingkat 3, digabung menjadi satu berkas. Disusun untuk latihan mandiri.",
+      count: num
+    });
+    finalDoc.pages = finalDoc.pages.concat(bodyDoc.pages);
+
+    R.doc = finalDoc;
+    R.page = finalDoc.pages.length;
+    R.displayOffset = 0;
+    R.noBreak = false;
+    R.running = "Kunci Jawaban";
+    beginPage();
+    renderHeading("Kunci Jawaban", 2, {});
+    renderPara([{ text: "Cocokkan nomor soal dengan kunci berikut. Pembahasan tidak disertakan pada dokumen ini.", style: "r" }],
+      { size: 9.6, color: C.muted, lh: 1.5, spaceAfter: 6 });
+    renderKunciTable(keys);
+    return finalDoc;
+  }
+
   /* ---------- build & unduh ---------- */
   function build() {
     var src = window.UPKP_MATERI || {};
@@ -742,5 +917,39 @@
     }, 60);
   }
 
-  window.PDFExport = { downloadMateri: downloadMateri, build: build };
+  function downloadSoal(kind, btn, filename, label) {
+    var bank = kind === "tryout" ? (window.SOAL_TRYOUT || []) : (window.SOAL_LATIHAN || []);
+    if (!bank.length) {
+      if (window.UI) UI.toast("Bank soal belum tersedia", "bad");
+      return;
+    }
+    if (btn) btn.disabled = true;
+    if (window.UI) UI.toast("Menyusun PDF " + label + "\u2026");
+    setTimeout(function () {
+      try {
+        var blob = assemble(buildSoal(kind));
+        save(blob, filename);
+        if (window.UI) UI.toast("PDF " + label + " berhasil diunduh");
+      } catch (e) {
+        if (window.UI) UI.toast("Gagal menyusun PDF", "bad");
+        if (window.console) console.error(e);
+      } finally {
+        if (btn) btn.disabled = false;
+      }
+    }, 60);
+  }
+  function downloadLatihan(btn) {
+    downloadSoal("latihan", btn, "Latihan-Soal-per-Materi-UPKP-Tingkat-3.pdf", "latihan per materi");
+  }
+  function downloadTryout(btn) {
+    downloadSoal("tryout", btn, "CAT-Tryout-UPKP-Tingkat-3.pdf", "CAT Tryout");
+  }
+
+  window.PDFExport = {
+    downloadMateri: downloadMateri,
+    build: build,
+    buildSoal: buildSoal,
+    downloadLatihan: downloadLatihan,
+    downloadTryout: downloadTryout
+  };
 })();

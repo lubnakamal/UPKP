@@ -34,6 +34,7 @@ Seluruh aplikasi berjalan **offline** — tanpa server, tanpa build, tanpa CDN, 
 - Navigasi bebas antar soal, penanda **ragu-ragu**, serta status terjawab pada navigator.
 - **Autosave** setiap jawaban; sesi dapat dilanjutkan setelah halaman ditutup atau di-refresh.
 - Tanpa pengurangan nilai: 1 poin per jawaban benar.
+- **Unduh PDF soal + kunci** untuk **Latihan per Materi** (semua materi digabung jadi satu berkas) dan **CAT Tryout** — hanya soal dan kunci jawaban, tanpa pembahasan.
 
 ### Tryout HOTS (mode rahasia)
 - **100 soal penalaran tingkat tinggi** murni dengan komposisi **sesuai blueprint resmi** (TWK 30, TKT 25, TSI 30, TKP 15): 34 soal C4 (Menganalisis), 34 soal C5 (Mengevaluasi), dan 32 soal C6 (Mencipta).
@@ -73,6 +74,17 @@ Sekali klik, aplikasi menyusun **satu berkas PDF** (`Materi-UPKP-Tingkat-3.pdf`)
 - Header berjalan (judul modul) dan footer bernomor halaman pada setiap halaman.
 
 PDF ditulis sepenuhnya di dalam aplikasi (`assets/js/pdf.js`) — **tanpa library, tanpa CDN, dan tanpa koneksi internet** — sehingga tetap bekerja pada protokol `file://`.
+
+---
+
+## Unduh Soal + Kunci (PDF)
+
+Selain materi, tersedia unduhan **soal beserta kunci jawaban** (tanpa pembahasan):
+
+- **Latihan per Materi** → tombol **Unduh PDF** di header halaman *Latihan per Materi*. Menghasilkan `Latihan-Soal-per-Materi-UPKP-Tingkat-3.pdf` berisi seluruh 100 soal latihan dari 12 materi, dikelompokkan per kelompok ujian dan per materi.
+- **CAT Tryout** → tombol **Unduh PDF Soal** di halaman briefing *CAT Tryout*. Menghasilkan `CAT-Tryout-UPKP-Tingkat-3.pdf` berisi 100 soal tryout dengan komposisi resmi.
+
+Setiap berkas memuat **sampul**, **soal bernomor berurutan** (stimulus + pertanyaan + opsi A–E), dan bagian **Kunci Jawaban** di akhir dokumen. **Pembahasan tidak disertakan** sehingga cocok untuk latihan mandiri maupun cetak. Berkas disusun dengan penulis PDF yang sama (`assets/js/pdf.js`) sehingga tetap bekerja offline pada `file://`.
 
 ---
 
@@ -149,7 +161,7 @@ D:\www\UPKP\
 │       ├── store.js            # Persistensi localStorage (settings, progress, session, attempts)
 │       ├── ui.js               # Helper UI: ikon, escape HTML, feedback soal, toast, modal
 │       ├── materi.js           # Indeks materi, filter/pencarian, halaman detail + TOC
-│       ├── pdf.js              # Penulis PDF mandiri: gabung 13 modul jadi satu berkas PDF
+│       ├── pdf.js              # Penulis PDF mandiri: materi gabungan + soal & kunci (latihan/tryout)
 │       ├── quiz.js             # Siklus sesi CAT, timer, autosave, navigasi, submit
 │       ├── hasil.js            # Skor, review/pembahasan, riwayat & analitik
 │       └── app.js              # Router hash, dashboard, halaman tryout, pengaturan, nav mobile

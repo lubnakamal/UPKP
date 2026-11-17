@@ -83,6 +83,7 @@
           "</ul>" +
           '<div class="result-actions">' +
             '<button class="btn btn-primary btn-lg" id="startTryout">' + UI.icon("play", 17) + (active ? "Mulai ulang tryout" : "Mulai Tryout Sekarang") + "</button>" +
+            '<button class="btn btn-lg" id="dlTryout">' + UI.icon("download", 17) + " Unduh PDF Soal</button>" +
             (attempts.length ? '<a class="btn btn-lg" href="#/riwayat">' + UI.icon("chart", 17) + " Lihat riwayat</a>" : "") +
           "</div>" +
           (attempts.length ? '<p class="tiny" style="margin-top:10px">Tryout terbaik: <b>' + best + " / 100</b> · " + attempts.length + " percobaan</p>" : "") +
@@ -101,6 +102,8 @@
 
     var start = document.getElementById("startTryout");
     if (start) start.addEventListener("click", function () { begin("tryout", null); });
+    var dlTry = document.getElementById("dlTryout");
+    if (dlTry) dlTry.addEventListener("click", function () { if (window.PDFExport) PDFExport.downloadTryout(dlTry); });
     var drop = document.getElementById("dropSession");
     if (drop) drop.addEventListener("click", function () {
       UI.confirm({
@@ -144,12 +147,15 @@
       '<div class="section-head" style="margin-top:0"><div><span class="eyebrow">Latihan terarah</span><h1 class="h1" style="margin-top:8px">Latihan per Materi</h1>' +
       '<p class="lede" style="margin-top:8px">Pilih satu materi, jawab, lalu baca pembahasan yang menjelaskan alasan setiap opsi — plus variasi soal yang mungkin muncul.</p></div>' +
       '<div class="row"><span class="chip">' + bankAll.length + " soal latihan</span>" +
+        '<button class="btn btn-sm" id="dlLatihan">' + UI.icon("download", 15) + " Unduh PDF</button>" +
         (hotsUnlocked() ? '<a class="btn btn-sm" href="#/hots">' + UI.icon("spark", 15) + " Tryout HOTS</a>" : "") +
       "</div></div>" + sections;
 
     document.querySelectorAll("[data-latihan]").forEach(function (b) {
       b.addEventListener("click", function () { begin("latihan", b.getAttribute("data-latihan")); });
     });
+    var dlLat = document.getElementById("dlLatihan");
+    if (dlLat) dlLat.addEventListener("click", function () { if (window.PDFExport) PDFExport.downloadLatihan(dlLat); });
   }
 
   /* ---------- tryout HOTS (mode rahasia) ---------- */
