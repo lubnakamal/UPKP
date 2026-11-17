@@ -120,6 +120,8 @@
     /* ---------- misc ---------- */
     resetAll: function () {
       ["settings", "progress", "session", "attempts"].forEach(rawDel);
+      // Kunci kembali mode rahasia (Tryout HOTS) pada sesi berjalan.
+      try { sessionStorage.removeItem("upkp.hots.unlocked"); } catch (e) { /* abaikan */ }
     },
     exportJSON: function () {
       return JSON.stringify({

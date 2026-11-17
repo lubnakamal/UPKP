@@ -43,7 +43,7 @@ Seluruh aplikasi berjalan **offline** — tanpa server, tanpa build, tanpa CDN, 
 - **Umpan balik langsung**: setiap jawaban langsung menampilkan benar/salah beserta penjelasan singkat (inti, alasan kunci, analisis tiap opsi, dasar konsep/hukum, jebakan, dan variasi soal).
 - Jawaban terkunci setelah dipilih; jawaban tersimpan otomatis dan sesi dapat dilanjutkan.
 - Hasil menampilkan **capaian per level kognitif (C4/C5/C6)**.
-- **Terkunci secara bawaan.** Untuk membukanya, ketik kode rahasia **`karangmoncol`** di mana saja pada halaman aplikasi (bukan di dalam kolom isian). Status terbuka tersimpan otomatis di perangkat.
+- **Terkunci secara bawaan.** Untuk membukanya, ketik kode rahasia **`karangmoncol`** di mana saja pada halaman aplikasi (bukan di dalam kolom isian). Status terbuka hanya berlaku pada **sesi/tab berjalan** — tautan *Tryout HOTS* dan rute `#/hots` kembali tersembunyi/terkunci setiap sesi baru sampai kode dimasukkan lagi.
 
 ### Pembahasan
 - Skor akhir dan rincian per kelompok/materi.
@@ -114,7 +114,7 @@ Ketik kode rahasia berikut di mana saja pada halaman aplikasi (pastikan fokus **
 karangmoncol
 ```
 
-Setelah kode dikenali, aplikasi otomatis membuka halaman **Tryout HOTS** dan menyimpan status terbuka di perangkat. Selama belum dibuka, rute `#/hots` menampilkan halaman terkunci.
+Setelah kode dikenali, aplikasi otomatis membuka halaman **Tryout HOTS** dan membukanya untuk **sesi berjalan** saja. Selama belum dibuka, tautan *Tryout HOTS* di halaman *Latihan per Materi* tidak ditampilkan dan rute `#/hots` menampilkan halaman terkunci. Karena status terbuka tidak disimpan permanen, setiap sesi/tab baru memerlukan kode `karangmoncol` lagi.
 
 > Karena seluruh logika berjalan di sisi klien, kode ini berfungsi sebagai penyaring, bukan pengamanan kriptografis.
 
@@ -217,12 +217,13 @@ Semua data disimpan lokal di browser dengan namespace `upkp.v1.`:
 
 | Key | Isi |
 |---|---|
-| `upkp.v1.settings` | Tema (`light`/`dark`), preferensi animasi, dan status kunci Tryout HOTS (`hotsUnlocked`) |
+| `upkp.v1.settings` | Tema (`light`/`dark`) dan preferensi animasi |
 | `upkp.v1.progress` | Daftar materi yang sudah dibaca + materi terakhir |
 | `upkp.v1.session` | Sesi ujian aktif (jawaban, indeks soal, flag, sisa waktu) |
 | `upkp.v1.attempts` | Riwayat percobaan (maksimal 60) |
 
 Catatan:
+- Status terbuka **Tryout HOTS** tidak disimpan permanen; hanya bertahan pada sesi/tab berjalan melalui `sessionStorage` (`upkp.hots.unlocked`).
 - Data **tidak** dikirim ke mana pun.
 - Menghapus data situs/browser akan menghapus progres.
 - Gunakan **Pengaturan → Ekspor JSON** untuk mencadangkan progres.

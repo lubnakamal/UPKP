@@ -19,11 +19,22 @@
   function immediate(mode) { return mode === "latihan" || mode === "hots"; }
 
   /* ---------- kunci mode rahasia (Tryout HOTS) ---------- */
+  /* Status terbuka bersifat sementara: hanya berlaku pada sesi/tab
+     berjalan. Dengan begitu tautan "Tryout HOTS" dan rute #/hots
+     selalu tersembunyi sampai kode dimasukkan pada sesi berjalan,
+     dan tidak lagi bocor dari sesi sebelumnya. */
+  var HOTS_SESSION_KEY = "upkp.hots.unlocked";
+  var hotsSessionOpen = false;
   function hotsUnlocked() {
-    try { return !!(window.Store && Store.settings().hotsUnlocked); } catch (e) { return false; }
+    if (hotsSessionOpen) return true;
+    try { return sessionStorage.getItem(HOTS_SESSION_KEY) === "1"; } catch (e) { return false; }
   }
   function unlockHots() {
-    try { Store.saveSettings({ hotsUnlocked: true }); } catch (e) { /* abaikan */ }
+    hotsSessionOpen = true;
+    try { sessionStorage.setItem(HOTS_SESSION_KEY, "1"); } catch (e) { /* abaikan */ }
+    /* Bersihkan status lama yang dulu tersimpan permanen di perangkat,
+       agar tidak ada sisa data yang membocorkan mode rahasia. */
+    try { if (window.Store) Store.saveSettings({ hotsUnlocked: false }); } catch (e) { /* abaikan */ }
   }
 
   function questionById(id) {
