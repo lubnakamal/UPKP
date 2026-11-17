@@ -95,13 +95,14 @@ Selain tryout dan latihan biasa, aplikasi menyimpan satu mode tersembunyi: **Try
 - **Sebaran level:** 34 soal **C4 · Analisis**, 34 soal **C5 · Evaluasi**, dan 32 soal **C6 · Mencipta**.
 - **Komposisi materi (sesuai blueprint):**
 
-| Kelompok | Jumlah | Materi (HOTS) |
+| Kelompok | Jumlah | Materi (HOTS, urut sesuai blueprint) |
 |---|---:|---|
 | TWK | 30 | Pancasila 10, UUD 1945 10, Sejarah Indonesia 5, Bahasa Indonesia 5 |
-| TKT | 25 | Peraturan Kepegawaian 10, Pelayanan Publik 5, Good Governance 5, Kebijakan Publik 5 |
-| TSI | 30 | Renstra & Perencanaan 15, SOTK 15 |
+| TKT | 25 | Peraturan Kepegawaian 10, Pelayanan Publik 5, Tata Kelola Pemerintahan yang Baik (Good Governance) 5, Kebijakan Publik 5 |
+| TSI | 30 | Renstra Instansi 15, SOTK 15 |
 | TKP | 15 | Bahasa Inggris 10, Literasi Digital 5 |
 | **Total** | **100** | |
+- **Urutan soal** dalam sesi HOTS mengikuti komposisi di atas: seluruh soal Pancasila lebih dulu, lalu UUD 1945, Sejarah, Bahasa Indonesia, dan seterusnya sampai Literasi Digital.
 - **Cakupan:** seluruh 12 materi teruji (TWK, TKT, TSI, TKP) dengan jumlah butir per materi mengikuti blueprint di atas.
 - **Bukan hanya soal yang HOTS** — opsi jawaban, pengecoh, dan seluruh pembahasan juga dirancang pada level penalaran tinggi.
 - **Tanpa batas waktu** dan memberi **umpan balik langsung** benar/salah + penjelasan singkat setelah setiap soal dijawab.
